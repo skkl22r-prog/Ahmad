@@ -54,7 +54,7 @@ const onTouchEnd = () => {
  <div
   className="overflow-x-hidden w-full"
   style={{
-background: "linear-gradient(180deg, #FCFBF8 0%, #F7F5F0 50%, #FCFBF8 100%)"
+background: "linear-gradient(180deg, #FCFBF8 0%, #F7F5F0 50%, #FCFBF8 100%)",
     minHeight: "100vh",
   }}
 >
@@ -74,7 +74,7 @@ className="hidden"
 <div
   className="fixed inset-0 z-0"
   style={{
-background:"#F7F5F0"
+background:"#F7F5F0",
     pointerEvents: "none",
   }}
 />
@@ -91,7 +91,7 @@ background:"#F7F5F0"
   className="fixed top-5 right-5 z-[9999] flex p-1 rounded-xl"
   style={{
     background: "#F7F5F0",
-border:"1px solid #D7D8CC"
+border:"1px solid #D7D8CC",
     boxShadow: "0 4px 12px rgba(0,0,0,.08)",
   }}
 >

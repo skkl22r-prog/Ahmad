@@ -54,7 +54,7 @@ const onTouchEnd = () => {
  <div
   className="overflow-x-hidden w-full"
   style={{
-    background: "linear-gradient(180deg, #FCFBFD 0%, #F2EEF6 50%, #FCFBFD 100%)",
+background: "linear-gradient(180deg, #FCFBF8 0%, #F7F5F0 50%, #FCFBF8 100%)"
     minHeight: "100vh",
   }}
 >
@@ -74,7 +74,7 @@ className="hidden"
 <div
   className="fixed inset-0 z-0"
   style={{
-    background: "#F2EEF6",
+background:"#F7F5F0"
     pointerEvents: "none",
   }}
 />
@@ -90,8 +90,8 @@ className="hidden"
  dir="ltr"
   className="fixed top-5 right-5 z-[9999] flex p-1 rounded-xl"
   style={{
-    background: "#F2EEF6",
-    border: "1px solid #D8C8D9",
+    background: "#F7F5F0",
+border:"1px solid #D7D8CC"
     boxShadow: "0 4px 12px rgba(0,0,0,.08)",
   }}
 >
@@ -99,8 +99,8 @@ className="hidden"
   onClick={() => lang !== "en" && toggle()}
   className="px-3 py-1 rounded-lg text-sm font-semibold transition-all"
   style={{
-    background: lang === "en" ? "#A882B8" : "transparent",
-    color: lang === "en" ? "#fff" : "#7A6A82",
+    background: lang === "en" ? "#687451" : "transparent",
+    color: lang === "en" ? "#fff" : "#6E7562",
   }}
 >
   EN
@@ -110,8 +110,8 @@ className="hidden"
   onClick={() => lang !== "ar" && toggle()}
   className="px-3 py-1 rounded-lg text-sm font-semibold transition-all"
   style={{
-    background: lang === "ar" ? "#A882B8" : "transparent",
-    color: lang === "ar" ? "#fff" : "#7A6A82",
+    background: lang === "ar" ? "#687451" : "transparent",
+    color: lang === "ar" ? "#fff" : "#6E7562",
   }}
 >
   AR
@@ -129,7 +129,7 @@ className="hidden"
   playsInline
   className="absolute inset-0 w-full h-full object-cover animate-videoFade"
   style={{
-    background: "#F2EEF6",
+background:"#F7F5F0",
   }}
 />
 <div
@@ -271,14 +271,14 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
   <Reveal>
     <p
       className="text-center font-arabic text-sm mb-2"
-      style={{ color: "#8C7A67" }}
+      style={{ color: "#7B8470" }}
     >
 {t("countdown_date")}
     </p>
 
     <h2
       className="text-center font-arabic text-3xl mb-10"
-      style={{ color: "#3C2E23" }}
+      style={{ color: "#394132" }}
     >
     {t("countdown_title")}
     </h2>
@@ -308,14 +308,14 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
 
     <h2
       className="font-arabic text-3xl"
-      style={{ color: "#3C2E23" }}
+      style={{ color: "#394132" }}
     >
 {t("details_title")}
     </h2>
 
    <div
   className="font-arabic text-sm mt-2"
-  style={{ color: "#7A6A82" }}
+  style={{ color: "#7B8470" }}
 >
   {t("details_subtitle")}
 </div>
@@ -339,9 +339,9 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
     <div
       className="max-w-sm mx-auto rounded-3xl p-4"
       style={{
-        background: "#FFFDFB",
-        border: "1px solid #D8C8D9",
-        boxShadow: "0 10px 30px rgba(120, 85, 140, 0.12)",
+        background: "#FFFEFC",
+        border: "1px solid #D7D8CC",
+        boxShadow:"0 12px 30px rgba(79,93,63,.10)",
       }}
     >
       {/* اسم القاعة */}
@@ -355,7 +355,7 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
         <span
           className="font-arabic text-sm"
           style={{
-            color: "#000",
+            color: "#394132",
             fontWeight: 600,
           }}
         >
@@ -380,7 +380,7 @@ title={t("map_title")}
       <div
         className="text-center mt-4 font-arabic"
         style={{
-          color: "#000",
+          color: "#394132",
           fontSize: "15px",
           fontWeight: 600,
         }}
@@ -392,12 +392,12 @@ title={t("map_title")}
       <div className="flex items-center justify-center gap-2 mt-3 mb-5">
         <Clock
           className="w-4 h-4"
-          style={{ color: "#A882B8" }}
+          style={{ color: "#687451" }}
         />
 
         <span
           className="font-arabic text-sm"
-          style={{ color: "#000" }}
+          style={{ color: "#394132" }}
         >
 {t("arrival_time")}
         </span>
@@ -412,8 +412,8 @@ title={t("map_title")}
           className="py-3 rounded-xl text-center font-arabic text-sm"
           style={{
             background: "#FFFFFF",
-            border: "1px solid #D9C2E4",
-            color: "#A882B8",
+            border: "1px solid #C8CFBF",
+            color: "#536042",
             fontWeight: 600,
             textDecoration: "none",
           }}
@@ -425,7 +425,7 @@ title={t("map_title")}
           href="/event.ics"
           className="py-3 rounded-xl text-center font-arabic text-sm"
           style={{
-            background: "#A882B8",
+            background: "#536042",
             color: "#FFF",
             fontWeight: 600,
             textDecoration: "none",
@@ -454,14 +454,14 @@ title={t("map_title")}
 
     <h2
       className="font-arabic text-3xl"
-      style={{ color: "#3C2E23" }}
+      style={{ color: "#394132" }}
     >
     {t("program_title")}
     </h2>
 
     <div
       className="font-arabic text-sm mt-2"
-      style={{ color: "#7A6A82" }}
+      style={{ color: "#7B8470" }}
     >
 {t("program_subtitle")}
     </div>
@@ -489,10 +489,10 @@ title={t("map_title")}
           alt=""
           className="w-16 h-auto mx-auto"
         />
-        <div className="font-arabic text-sm mt-3" style={{ color: "#000" }}>
+        <div className="font-arabic text-sm mt-3" style={{ color: "#394132" }}>
 {t("program_zaffa")}
         </div>
-        <div className="font-arabic text-xs mt-1" style={{ color: "#7A6A82" }}>
+        <div className="font-arabic text-xs mt-1" style={{ color: "#7B8470" }}>
 {t("zaffa_time")}
         </div>
       </div>
@@ -503,10 +503,10 @@ title={t("map_title")}
           alt=""
           className="w-16 h-auto mx-auto"
         />
-        <div className="font-arabic text-sm mt-3" style={{ color: "#000" }}>
+        <div className="font-arabic text-sm mt-3" style={{ color: "#394132" }}>
 {t("program_dinner")}
         </div>
-        <div className="font-arabic text-xs mt-1" style={{ color: "#7A6A82" }}>
+        <div className="font-arabic text-xs mt-1" style={{ color: "#7B8470" }}>
 {t("dinner_time")}
         </div>
       </div>
@@ -519,7 +519,7 @@ title={t("map_title")}
         />
         <div
           className="font-arabic text-sm mt-3"
-          style={{ color: "#000", width: "120px" }}
+          style={{ color: "#394132", width: "120px" }}
         >
 {t("no_cameras")}
         </div>
@@ -533,7 +533,7 @@ title={t("map_title")}
         />
         <div
           className="font-arabic text-sm mt-3"
-          style={{ color: "#000", width: "120px" }}
+          style={{ color: "#394132", width: "120px" }}
         >
 {t("no_kids")}
         </div>
@@ -544,7 +544,7 @@ title={t("map_title")}
 
   <p
     className="text-center font-arabic text-sm mt-5"
-    style={{ color: "#7A6A82" }}
+    style={{ color: "#7B8470" }}
   >
 {t("swipe_more")}
   </p>
@@ -564,14 +564,14 @@ title={t("map_title")}
 
       <h2
         className="font-arabic text-3xl"
-        style={{ color: "#3C2E23" }}
+        style={{ color: "#394132" }}
       >
 {t("rsvp_title")}
       </h2>
 
       <div
         className="font-arabic text-sm mt-2"
-        style={{ color: "#7A6A82" }}
+        style={{ color: "#7B8470" }}
       >
 {t("rsvp_deadline")}
       </div>
@@ -599,7 +599,7 @@ title={t("map_title")}
 
     <div
       className="font-arabic text-sm"
-      style={{ color: "#3C2E23" }}
+      style={{ color: "#394132" }}
     >
       {t("made_by")}
       <a
@@ -607,7 +607,7 @@ title={t("map_title")}
         target="_blank"
         rel="noopener noreferrer"
         className="underline underline-offset-4 transition-colors"
-        style={{ color: "#3C2E23" }}
+        style={{ color: "#394132" }}
       >
         {t("store")}
       </a>
@@ -618,7 +618,7 @@ title={t("map_title")}
       target="_blank"
       rel="noopener noreferrer"
       className="block mt-2 text-sm underline underline-offset-4"
-      style={{ color: "#8A6C97" }}
+      style={{ color: "#687451" }}
     >
       @shim2t.TikTok
     </a>

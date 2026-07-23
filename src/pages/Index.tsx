@@ -197,10 +197,11 @@ style={{
       <span>{t("word2")}</span>
     </div>
 
+{/*
 <div className={`font-iran ${
   lang === "ar"
       ? "text-6xl sm:text-7xl"
-    : "text-5xl sm:text-6xl"
+      : "text-5xl sm:text-6xl"
 } whitespace-nowrap flex justify-center items-center gap-8 my-3`}>
   <span>{t("mother_name1")}</span>
 
@@ -208,6 +209,7 @@ style={{
 
   <span className="hidden">{t("mother_name2")}</span>
 </div>
+*/}
 
 <div className={`font-kahand ${
   lang === "ar"

@@ -9,7 +9,7 @@ import Countdown from "@/components/Countdown";
 import Timeline from "@/components/Timeline";
 import RSVP from "@/components/RSVP";
 import MusicToggle from "@/components/MusicToggle";
-import dividerImg from "@/assets/Photoroom_20260705_140806.png";
+import dividerImg from "@/assets/3BE89C28-CC00-451A-9139-BFA80780EBC1.png";
 import locationIcon from "@/assets/Map.png";
 import flowerDivider from "@/assets/Photoroom_20260705_152753.png";
 import programIcon from "@/assets/Photoroom_20260705_152814.png";

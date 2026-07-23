@@ -367,7 +367,7 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
       {/* الخريطة */}
       <iframe
 title={t("map_title")}
-        src="https://www.google.com/maps?q=قاعة+أروما+الرياض&output=embed"
+src="https://www.google.com/maps?q=26.0165437,49.9989607&output=embed"
         width="100%"
         height="230"
         loading="lazy"
@@ -407,7 +407,7 @@ title={t("map_title")}
       {/* الأزرار */}
       <div className="grid grid-cols-2 gap-3">
         <a
-          href="https://www.google.com/maps/search/?api=1&query=قاعة+أروما+الرياض"
+href="https://maps.google.com?q=26.0165437,49.9989607"
           target="_blank"
           rel="noopener noreferrer"
           className="py-3 rounded-xl text-center font-arabic text-sm"
@@ -586,17 +586,17 @@ title={t("map_title")}
           <footer className="px-4 py-12 text-center">
   <Reveal>
 
-    <Heart
-      className="w-5 h-5 fill-current mx-auto mb-3"
-      style={{ color: "##394132" }}
-    />
+   <Heart
+  className="w-5 h-5 fill-current mx-auto mb-3"
+  style={{ color: "#687451" }}
+/>
 
     <div
-      className="font-iran text-2xl mb-2"
-      style={{ color: "#394132" }}
-    >
-      {t("designer_names")}
-    </div>
+  className="font-iran text-2xl mb-2"
+  style={{ color: "#687451" }}
+>
+  {t("designer_names")}
+</div>
 
     <div
       className="font-arabic text-sm"

@@ -588,12 +588,12 @@ title={t("map_title")}
 
     <Heart
       className="w-5 h-5 fill-current mx-auto mb-3"
-      style={{ color: "#8A6C97" }}
+      style={{ color: "##394132" }}
     />
 
     <div
       className="font-iran text-2xl mb-2"
-      style={{ color: "#8A6C97" }}
+      style={{ color: "#394132" }}
     >
       {t("designer_names")}
     </div>

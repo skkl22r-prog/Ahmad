@@ -61,7 +61,7 @@ countdown_date: "٣١ يوليو ٢٠٢٦",
   swipe_more: "اسحب لرؤية المزيد",
 
   // RSVP
-  rsvp_title: "يشرفنا حضوركم",
+  rsvp_title: "الدعوة شخصية",
   rsvp_sub: "نتشرف بحضوركم",
   rsvp_deadline: "نرجو الرد قبل  ٣١ يوليو ٢٠٢٦",
 
@@ -166,7 +166,7 @@ countdown_date: "28 July 2026",
   swipe_more: "Swipe to see more",
 
   // RSVP
-  rsvp_title: "Confirm Your Attendance",
+  rsvp_title: "Personal Invitation",
   rsvp_sub: "We would be honored by your presence",
   rsvp_deadline: "Please respond before July 31, 2026",
 

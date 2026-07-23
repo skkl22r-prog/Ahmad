@@ -513,11 +513,11 @@ title={t("map_title")}
       </div>
 
       <div className="text-center shrink-0">
-        <img
-          src={cameraImg}
-          alt=""
-          className="w-16 h-auto mx-auto"
-        />
+       <img
+  src={phoneImg}
+  alt=""
+  className="w-16 h-auto mx-auto"
+/>
         <div
           className="font-arabic text-sm mt-3"
           style={{ color: "#394132", width: "120px" }}

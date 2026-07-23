@@ -342,11 +342,6 @@ color: "#394132",
           }}
           dir={lang === "ar" ? "rtl" : "ltr"}
 />
-<label
-  className="block font-arabic text-sm mb-2 mt-4 text-right"
-  style={{ color: "#394132" }}
->
-{t("guest_count")}
 
 
 <div className="grid grid-cols-2 gap-3 mt-5">

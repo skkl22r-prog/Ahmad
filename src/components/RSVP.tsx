@@ -181,9 +181,9 @@ await fetch(
         <div
           className="mx-auto max-w-md rounded-2xl p-8 text-center backdrop-blur-md"
 style={{
-  background: "#FCFAF8",
-  border: "1px solid #D8C8D9",
-  boxShadow: "0 10px 30px rgba(120, 85, 140, 0.12)",
+  background: "#FFFEFC",
+border: "1px solid #D7D8CC",
+boxShadow: "0 12px 30px rgba(79,93,63,.10)",
 }}
         >
 <Heart
@@ -195,7 +195,7 @@ style={{
 />
 <p
   className="font-arabic text-xl leading-loose"
-  style={{ color: "#3C2E23" }}
+  style={{ color: "#394132" }}
 >
 {t("thanks_declined")}
 <br />
@@ -317,14 +317,14 @@ fgColor="#2F1D38"
 <div
   className="rounded-2xl p-6 text-center backdrop-blur-md"
   style={{
-    background: "#FCFAF8",
-    border: "1px solid #D8C8D9",
-    boxShadow: "0 10px 30px rgba(120, 85, 140, 0.12)",
+    background: "#FFFEFC",
+border: "1px solid #D7D8CC",
+boxShadow: "0 12px 30px rgba(79,93,63,.10)",
   }}
       >
         <label
   className="block font-arabic text-sm mb-2 text-right"
-  style={{ color: "#3C2E23" }}
+  style={{ color: "#394132" }}
 >
 {t("name_label")}
 </label>
@@ -337,47 +337,17 @@ placeholder={t("name_placeholder")}
           className="w-full px-4 py-3 rounded-xl font-arabic text-right outline-none transition-colors"
           style={{
             background: "#FFFFFF",
-border: "1px solid #D8C8D9",
-color: "#3C2E23",
+border: "1px solid #D7D8CC",
+color: "#394132",
           }}
           dir={lang === "ar" ? "rtl" : "ltr"}
 />
 <label
   className="block font-arabic text-sm mb-2 mt-4 text-right"
-  style={{ color: "#3C2E23" }}
+  style={{ color: "#394132" }}
 >
 {t("guest_count")}
-</label>
-<div className="flex flex-row-reverse gap-2">
-  {["5", "4", "3", "2", "1"].map((num) => (
-    <button
-  key={num}
-  type="button"
-  onClick={() => setGuestCount(num)}
-  className="flex-1 py-3 rounded-xl font-arabic transition-all"
-  style={{
-    background:
-      guestCount === num
-        ? "#A882B8"
-        : "#FFFFFF",
-    color:
-      guestCount === num
-        ? "#FFFFFF"
-        : "#3C2E23",
-    border:
-      guestCount === num
-        ? "1px solid #A882B8"
-        : "1px solid #D8C8D9",
-    boxShadow:
-      guestCount === num
-        ? "0 8px 18px rgba(168,130,184,0.25)"
-        : "none",
-  }}
->
-  {t(`guests_${num}`)}
-</button>
-  ))}
-</div>
+
 
 <div className="grid grid-cols-2 gap-3 mt-5">
   <button
@@ -385,15 +355,21 @@ color: "#3C2E23",
     className="py-3 rounded-xl font-arabic text-sm transition-all flex items-center justify-center gap-2"
     style={{
 background:
-  choice === "attending"
-    ? "linear-gradient(135deg, #CBBBCF, #A882B8)"
-    : "#F8F6F4",
-color: choice === "attending" ? "#FFFFFF" : "#7A6A82",
-border: "1px solid #D8C8D9",
+choice === "attending"
+? "#687451"
+: "#F7F5F0",
+
+color:
+choice === "attending"
+? "#FFFFFF"
+: "#394132",
+
+border: "1px solid #D7D8CC",
+
 boxShadow:
-  choice === "attending"
-    ? "0 0 18px rgba(168,130,184,.25)"
-    : "none",
+choice === "attending"
+? "0 0 18px rgba(79,93,63,.18)"
+: "none",
     }}
   >
 
@@ -404,14 +380,16 @@ boxShadow:
 className="py-3 rounded-xl font-arabic text-sm transition-all flex items-center justify-center"
             style={{
               background:
-  choice === "declined"
-    ? "#B8A5BC"
-    : "#F8F6F4",
+choice === "declined"
+? "#687451"
+: "#F7F5F0",
+
 color:
-  choice === "declined"
-    ? "#FFFFFF"
-    : "#7A6A82",
-border: "1px solid #D8C8D9",
+choice === "declined"
+? "#FFFFFF"
+: "#394132",
+
+border: "1px solid #D7D8CC",
             }}
           >
 
@@ -424,9 +402,9 @@ border: "1px solid #D8C8D9",
           disabled={!name.trim() || !choice || state.kind === "loading"}
 className="w-full mt-5 py-3 rounded-xl font-arabic text-base transition-all hover:scale-[1.02] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
           style={{
-            background: "linear-gradient(135deg, #CBBBCF, #A882B8)",
+            background: "#687451",
 color: "#FFFFFF",
-boxShadow: "0 4px 18px rgba(168,130,184,.28)",
+boxShadow: "0 4px 18px rgba(79,93,63,.18)",
             fontWeight: 700,
           }}
         >

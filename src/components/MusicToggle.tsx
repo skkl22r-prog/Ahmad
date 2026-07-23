@@ -48,7 +48,7 @@ const MusicToggle = ({ active }: Props) => {
         {playing ? (
 <Volume2 className="w-5 h-5" style={{ color: "#394132" }} />
         ) : (
-<VolumeX className="w-5 h-5" style={{ color: #394132" }} />
+<VolumeX className="w-5 h-5" style={{ color: "#394132" }} />
         )}
       </button>
     </>

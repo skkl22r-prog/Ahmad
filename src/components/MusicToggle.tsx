@@ -40,15 +40,15 @@ const MusicToggle = ({ active }: Props) => {
         aria-label={playing ? "إيقاف الموسيقى" : "تشغيل الموسيقى"}
         className="fixed bottom-4 left-4 z-50 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all hover:scale-110"
         style={{
-  background: "rgba(255, 255, 255, 0.75)",
-  border: "1.5px solid #CFC3DD",
-  boxShadow: "0 8px 25px rgba(140, 120, 170, 0.18)",
+  background: "rgba(255, 254, 252, 0.85)",
+  border: "1.5px solid #D7D8CC",
+  boxShadow: "0 8px 25px rgba(79, 93, 63, 0.10)",
 }}
       >
         {playing ? (
-<Volume2 className="w-5 h-5" style={{ color: "#8F79A8" }} />
+<Volume2 className="w-5 h-5" style={{ color: "#394132" }} />
         ) : (
-<VolumeX className="w-5 h-5" style={{ color: "#8F79A8" }} />
+<VolumeX className="w-5 h-5" style={{ color: #394132" }} />
         )}
       </button>
     </>

@@ -57,11 +57,10 @@ try {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams({
-        "entry.714234054": name.trim(),
         "entry.822126556":
-          choice === "attending"
-            ? t("confirm")
-            : t("decline"),
+  choice === "attending"
+    ? "تاكيد الحضور"
+    : "الاعتذار عن الحضور",
       }),
     }
   );

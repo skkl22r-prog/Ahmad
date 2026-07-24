@@ -1,4 +1,4 @@
-import sosImg from "@/assets/sos.png";
+
 import { useEffect, useRef, useState } from "react";
 import { MapPin, Heart, QrCode, Baby, Camera, Clock } from "lucide-react";
 import invitationImg from "@/assets/video-output-35080D12-B695-4FDA-A7B3-055E037ED0F8-1.mp4";
@@ -80,13 +80,7 @@ className="hidden"
           backgroundSize: "150px 150px",
         }}
       />
-   {!opened && (
-  <img
-    src={sosImg}
-    alt=""
-    className="fixed inset-0 w-full h-full object-cover z-40 pointer-events-none"
-  />
-)}
+ 
 {opened && <SprayParticles />}
       <MusicToggle active={opened} />
 <Envelope onOpen={() => setOpened(true)} />
@@ -140,13 +134,7 @@ border:"1px solid #D7D8CC",
 
 <section className="flex justify-center relative z-20">
 <div className="relative w-full aspect-[9/16] overflow-hidden">
-{!videoReady && (
-  <img
-    src={sosImg}
-    alt=""
-    className="absolute inset-0 w-full h-full object-cover z-20"
-  />
-)}
+
 <video
   src={invitationImg}
   autoPlay
@@ -294,7 +282,6 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
 </div>
 </div>
 </div>
-  <div
   <div
   id="scrollHint"
   className="absolute left-1/2 -translate-x-1/2 bottom-2 z-50 flex flex-col items-center pointer-events-none"

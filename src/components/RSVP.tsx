@@ -57,11 +57,12 @@ try {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams({
-        "entry.822126556":
-  choice === "attending"
-    ? "تاكيد الحضور"
-    : "الاعتذار عن الحضور",
-      }),
+  "entry.714234054": name.trim(),
+  "entry.822126556":
+    choice === "attending"
+      ? "تاكيد الحضور"
+      : "الاعتذار عن الحضور",
+}),
     }
   );
 } catch {

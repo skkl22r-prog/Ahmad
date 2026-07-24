@@ -280,25 +280,7 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
     : "text-lg sm:text-xl"
 }`}>
       {t("date_line")}
-  <div
-  id="scrollHint"
-  className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none"
-  style={{
-    color: "#FFFFFF",
-    textShadow: "0 2px 10px rgba(0,0,0,.45)",
-    animation: "scrollHint 1.8s ease-in-out infinite",
-    transition: "all .5s ease",
-  }}
->
-  <span
-    className="font-tajawal text-sm mb-1"
-    style={{ fontWeight: 500 }}
-  >
-    اسحب للأسفل
-  </span>
 
-  <ChevronDown size={26} strokeWidth={2.3} />
-</div>
     </div>
   </div>
 </div>

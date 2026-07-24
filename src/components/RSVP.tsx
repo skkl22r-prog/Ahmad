@@ -90,7 +90,7 @@ msg: t("already_registered"),
   return;
 }
 await fetch(
-"https://docs.google.com/forms/d/e/1FAIpQLSfEfpr7Aatf4Ax0V12255Zc02l1MXpQ5gg38zba2L1GoXqotw/formResponse",
+  "https://docs.google.com/forms/d/e/1FAIpQLSdMeIIj2LqKbFlh2EJvMlmc0JdK85R8RvW2i7ZYQn6tbr5irg/formResponse",
   {
     method: "POST",
     mode: "no-cors",
@@ -98,15 +98,13 @@ await fetch(
       "Content-Type": "application/x-www-form-urlencoded",
     },
     body: new URLSearchParams({
-  "entry.622632682": name.trim(),
+      "entry.714234054": name.trim(),
 
-  "entry.1849221562":
-    choice === "attending"
-      ? t("confirm")
-      : t("decline"),
-
-  "entry.1162019807": guestCount,
-}),
+      "entry.822126556":
+        choice === "attending"
+          ? t("confirm")
+          : t("decline"),
+    }),
   }
 );
 

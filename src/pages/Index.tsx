@@ -239,7 +239,7 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
   </span>
 
   <span
-  className="font-goori"
+  className="font-sull"
   style={{
     fontSize: lang === "ar" ? "0.35em" : "0.45em",
     margin: "0 18px",

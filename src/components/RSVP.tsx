@@ -109,17 +109,14 @@ try {
   if (state.kind === "attending") {
     return (
       <Reveal>
-        <div
-          <div
-  className="mx-auto max-w-md rounded-2xl p-8 text-center backdrop-blur-md"
-  style={{
-    background: "#FFFEFC",
-    border: "1px solid #D7D8CC",
-    boxShadow: "0 12px 30px rgba(79,93,63,.10)",
-  }}
->
-          }}
-        >
+  <div
+    className="mx-auto max-w-md rounded-2xl p-8 text-center backdrop-blur-md"
+    style={{
+      background: "#FFFEFC",
+      border: "1px solid #D7D8CC",
+      boxShadow: "0 12px 30px rgba(79,93,63,.10)",
+    }}
+  >
          <Heart
   className="mx-auto w-10 h-10 mb-4"
   style={{
@@ -137,7 +134,7 @@ try {
 >
   نسعد بحضورك
 </div>
-        <p
+       <p
   className="font-arabic text-xl leading-loose"
   style={{ color: "#394132" }}
 >
@@ -155,17 +152,9 @@ try {
 
   <br />
 
-  <span
-    className="text-base"
-    style={{ color: "#7B8470" }}
-  >
-    {t("thanks_attending")}
-  </span>
-</p>
-
-<p className="font-arabic text-sm text-muted-foreground">
   {t("thanks_attending")}
 </p>
+
 </div>
       </Reveal>
     );

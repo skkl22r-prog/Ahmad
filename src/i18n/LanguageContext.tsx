@@ -14,7 +14,7 @@ const ar: Dict = {
   word1: "السيدة",
   word2: "السيدة",
   mother_name1: "أم معـاذ",
-and: "على",
+and: "&",
   mother_name2: "سميرة الغامدي",
   invite_attend: "عقد قـران",
   invite_before_bride: "أبنها",

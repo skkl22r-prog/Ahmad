@@ -41,7 +41,7 @@ countdown_date: "٣١ يوليو ٢٠٢٦",
   venue_name: "قاعة شهرزاد",
   venue_city: "الطائف",
 
-  hall_name: "قاعة أروما للمناسبات والمؤتمرات",
+  hall_name: "شالــية الجـــازي 301",
   hall_city: "شالية الجازي 310",
   arrival_time: "الحضور الساعة ٨:٣٠ م",
   open_map: "افتح في الخريطة",
@@ -130,7 +130,7 @@ and: "&",
   date_line: "31 . 07 . 2026 | 17 . 02 . 1448",
 
   // Countdown
-countdown_date: "28 July 2026",
+countdown_date: "31 July 2026",
   countdown_title: "Until Our Celebration ",
   days: "Days",
   hours: "Hours",

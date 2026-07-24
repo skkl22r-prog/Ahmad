@@ -55,20 +55,20 @@ const onTouchEnd = () => {
 };
   useEffect(() => {
   const hint = document.getElementById("scrollHint");
+  if (!hint) return;
 
   const hideHint = () => {
-    if (!hint) return;
-
     if (window.scrollY > 30) {
       hint.style.opacity = "0";
-      hint.style.visibility = "hidden";
+      hint.style.transform = "translate(-50%, 20px)";
     } else {
       hint.style.opacity = "1";
-      hint.style.visibility = "visible";
+      hint.style.transform = "translate(-50%, 0)";
     }
   };
 
-  window.addEventListener("scroll", hideHint);
+  hideHint();
+  window.addEventListener("scroll", hideHint, { passive: true });
 
   return () => {
     window.removeEventListener("scroll", hideHint);

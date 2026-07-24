@@ -9,6 +9,13 @@
 }
 
 @font-face {
+  font-family: "Sull";
+  src: url("./assets/fonts/sull.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "KAHand";
   src: url("./assets/fonts/KAHandNaskhV2-Regular.ttf") format("truetype");
 }
@@ -172,6 +179,9 @@
 
 .font-sarahhh1 {
   font-family: "SARAhhh1";
+}
+  .font-sull {
+  font-family: "Sull";
 }
 
 .font-tajawal-medium {

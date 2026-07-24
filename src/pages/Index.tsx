@@ -286,6 +286,22 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
 </div>
 </div>
 </div>
+  <div
+  id="scrollHint"
+  className="absolute left-1/2 -translate-x-1/2 bottom-2 z-50 flex flex-col items-center pointer-events-none"
+  style={{
+    color: "#FFFFFF",
+    textShadow: "0 2px 10px rgba(0,0,0,.45)",
+    animation: "scrollHint 1.8s ease-in-out infinite",
+    transition: "all .5s ease",
+  }}
+>
+  <span className="font-tajawal text-sm mb-1">
+    اسحب للأسفل
+  </span>
+
+  <ChevronDown size={26} strokeWidth={2.3} />
+</div>
 </section>
           {/* Countdown */}
         <section className="px-4 py-16">

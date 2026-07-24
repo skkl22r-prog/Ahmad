@@ -1,4 +1,4 @@
-
+import sosImg from "@/assets/sos.png";
 import { useEffect, useRef, useState } from "react";
 import { MapPin, Heart, QrCode, Baby, Camera, Clock } from "lucide-react";
 import invitationImg from "@/assets/video-output-35080D12-B695-4FDA-A7B3-055E037ED0F8-1.mp4";
@@ -30,6 +30,7 @@ const scrollRef = useRef<HTMLDivElement>(null);
 const startX = useRef(0);
 const startScroll = useRef(0);
 const dragging = useRef(false);
+  const [videoReady, setVideoReady] = useState(false);
 const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
   const el = scrollRef.current;
   if (!el) return;
@@ -143,13 +144,20 @@ border:"1px solid #D7D8CC",
 
 <section className="flex justify-center relative z-20">
 <div className="relative w-full aspect-[9/16] overflow-hidden">
-
+{!videoReady && (
+  <img
+    src={sosImg}
+    alt=""
+    className="absolute inset-0 w-full h-full object-cover z-20"
+  />
+)}
 <video
   src={invitationImg}
   autoPlay
   muted
   loop
   playsInline
+  onLoadedData={() => setVideoReady(true)}
   className="absolute inset-0 w-full h-full object-cover animate-videoFade"
   style={{
 background:"#F7F5F0",

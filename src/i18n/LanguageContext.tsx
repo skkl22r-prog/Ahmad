@@ -8,7 +8,7 @@ const ar: Dict = {
   // Invitation
   tap_open: "اضغط لفتح الدعوة",
   invite_to: "2",
-  invite_join: "الايــــــــــام الجميـلة لا تكتمل إلا بكم",
+  invite_join: "الايــــــــــــام الجميـلة لا تكتمل إلا بكم",
   invite_day: "والأوقات السعيدة لا تبدأ إلا معكم",
   invite_with_love: "يسعدنا ويشرفنا دعوتكم لحضور",
   word1: "السيدة",
@@ -41,15 +41,15 @@ countdown_date: "٣١ يوليو ٢٠٢٦",
   venue_name: "قاعة شهرزاد",
   venue_city: "الطائف",
 
-  hall_name: "شالــية الجـــازي 301",
-  hall_city: "شالية الجازي 310",
-  arrival_time: "الحضور الساعة ٨:٣٠ م",
+  hall_name: "شالــيه الجـــازي 301",
+  hall_city: "شاليه الجازي 310",
+  arrival_time: " ",
   open_map: "افتح في الخريطة",
   add_calendar: "إضافة إلى التقويم",
 
   // Program
   program_title: "برنامج الحفل",
-  program_subtitle: "خطتنا لليوم الكبير",
+  program_subtitle: " ",
    "program_reception": "الاستقبال",
 "reception_time": "الساعة ٨:٣٠ مساءً",
   program_zaffa: "الزفة",
@@ -63,7 +63,7 @@ countdown_date: "٣١ يوليو ٢٠٢٦",
   // RSVP
   rsvp_title: "الدعوة شخصية",
   rsvp_sub: "نتشرف بحضوركم",
-  rsvp_deadline: "نرجو الرد قبل  ٣١ يوليو ٢٠٢٦",
+  rsvp_deadline: "نرجو الرد قبل  ٢٩ يوليو ٢٠٢٦",
 
   name_label: "الاسم الكريم",
   name_placeholder: "اكتب اسمك هنا",
@@ -168,7 +168,7 @@ countdown_date: "31 July 2026",
   // RSVP
   rsvp_title: "Personal Invitation",
   rsvp_sub: "We would be honored by your presence",
-  rsvp_deadline: "Please respond before July 31, 2026",
+  rsvp_deadline: "Please respond before July 29, 2026",
 
   name_label: "Full Name",
   name_placeholder: "Enter your name",

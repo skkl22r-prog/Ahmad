@@ -17,18 +17,18 @@ const SprayParticles = () => {
     window.addEventListener("resize", resize);
 
     // Reduced count + gold tones + sparkle stars
-    const particles = Array.from({ length: 38 }, () => ({
+const particles = Array.from({ length: 22 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 1.6 + 0.3,
-      vy: Math.random() * 0.35 + 0.1,
-      vx: (Math.random() - 0.5) * 0.2,
+r: Math.random() * 0.9 + 0.2,
+     vy: Math.random() * 0.12 + 0.03,
+vx: (Math.random() - 0.5) * 0.05,
       o: Math.random() * 0.4 + 0.3,
       tw: Math.random() * Math.PI * 2,
       ts: Math.random() * 0.05 + 0.025,
-      isStar: Math.random() < 0.18,
-      hue: 265 + Math.random() * 20,
-sat: 18 + Math.random() * 10,
+isStar: false,
+      hue: 88 + Math.random() * 8,
+sat: 14 + Math.random() * 8,
     }));
 
     const drawStar = (x: number, y: number, r: number, alpha: number, hue: number) => {
@@ -65,7 +65,7 @@ grad.addColorStop(0.5, `hsla(${p.hue}, ${p.sat}%, 88%, ${alpha * 0.18})`);
 grad.addColorStop(1, `hsla(${p.hue}, ${p.sat}%, 80%, 0)`);
         ctx.fillStyle = grad;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r * 5, 0, Math.PI * 2);
+ctx.arc(p.x, p.y, p.r * 2.5, 0, Math.PI * 2);
         ctx.fill();
         // bright gold core
         ctx.beginPath();

@@ -426,20 +426,21 @@ src="https://www.google.com/maps?q=26.0165437,49.9989607&output=embed"
       </div>
 
       {/* وقت الحضور */}
-      <div className="flex items-center justify-center gap-2 mt-3 mb-5">
-        <Clock
-          className="w-4 h-4"
-          style={{ color: "#687451" }}
-        />
+    {t("arrival_time").trim() && (
+  <div className="flex items-center justify-center gap-2 mt-3 mb-5">
+    <Clock
+      className="w-4 h-4"
+      style={{ color: "#687451" }}
+    />
 
-        <span
-          className="font-arabic text-sm"
-          style={{ color: "#394132" }}
-        >
-{t("arrival_time")}
-        </span>
-      </div>
-
+    <span
+      className="font-arabic text-sm"
+      style={{ color: "#394132" }}
+    >
+      {t("arrival_time")}
+    </span>
+  </div>
+)}
       {/* الأزرار */}
       <div className="grid grid-cols-2 gap-3">
         <a

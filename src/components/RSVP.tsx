@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react"
 import { Heart } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import Reveal from "./Reveal";
-import { QRCodeCanvas } from "qrcode.react";
 import { useLang } from "@/i18n/LanguageContext";
 
 // 👈 عدّل رقم الواتساب هنا (بصيغة دولية بدون + أو 00). مثال السعودية: 9665XXXXXXXX
@@ -10,41 +8,37 @@ import { useLang } from "@/i18n/LanguageContext";
 type State =
   | { kind: "form" }
   | { kind: "loading" }
-| { kind: "attending"; name: string; guestCount: string }
+  | { kind: "attending"; name: string }
   | { kind: "declined"; name: string }
-  | { kind: "error"; msg: string }
-| { kind: "qr"; name: string; guestCount: string; qr: string };
+  | { kind: "error"; msg: string };
 const RSVP = () => {
 const { t, lang } = useLang();
   const [name, setName] = useState("");
-const [guestCount, setGuestCount] = useState("");
   const [choice, setChoice] = useState<"attending" | "declined" | null>(null);
   const [state, setState] = useState<State>({ kind: "form" });
 useEffect(() => {
-  const savedQr = localStorage.getItem("guest_qr");
+  const savedAttending = localStorage.getItem("guest_attending");
 
-if (savedQr) {
-  const data = JSON.parse(savedQr);
+  if (savedAttending) {
+    const data = JSON.parse(savedAttending);
 
- setState({
-  kind: "qr",
-  name: data.name,
-  guestCount: data.guestCount,
-  qr: data.qr,
-});
-  return;
-}
+    setState({
+      kind: "attending",
+      name: data.name,
+    });
+    return;
+  }
 
-const savedDeclined = localStorage.getItem("guest_declined");
+  const savedDeclined = localStorage.getItem("guest_declined");
 
-if (savedDeclined) {
-  const data = JSON.parse(savedDeclined);
+  if (savedDeclined) {
+    const data = JSON.parse(savedDeclined);
 
-  setState({
-    kind: "declined",
-    name: data.name,
-  });
-}
+    setState({
+      kind: "declined",
+      name: data.name,
+    });
+  }
 }, []);
 
   const submit = async () => {
@@ -52,94 +46,61 @@ if (savedDeclined) {
 
   setState({ kind: "loading" });
 
-  let deviceId = localStorage.getItem("device_id");
-
-if (!deviceId) {
-  deviceId = crypto.randomUUID();
-  localStorage.setItem("device_id", deviceId);
-}
-
-const qr_token = crypto.randomUUID();
-
-const { data: existing } = await supabase
-  .from("rsvpsRoko")
-  .select("id")
-  .eq("device_id", deviceId)
-  .maybeSingle();
-
-if (existing) {
+  
+try {
+  await fetch(
+    "https://docs.google.com/forms/d/e/1FAIpQLSdMeIIj2LqKbFlh2EJvMlmc0JdK85R8RvW2i7ZYQn6tbr5irg/formResponse",
+    {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams({
+        "entry.714234054": name.trim(),
+        "entry.822126556":
+          choice === "attending"
+            ? t("confirm")
+            : t("decline"),
+      }),
+    }
+  );
+} catch {
   setState({
     kind: "error",
-msg: t("already_registered"),
+    msg: t("error_try_again"),
   });
   return;
 }
 
-  const { error } = await supabase.from("rsvpsRoko").insert({
-  name: name.trim(),
-  status: choice,
-  guest_count: choice === "attending" ? guestCount : "0",
-  device_id: deviceId,
-  qr_token: qr_token,
-  scanned: false,
-});
-
-  if (error) {
-  console.log("SUPABASE ERROR:", error);
-  setState({ kind: "error", msg: t("error_try_again") });
-  return;
-}
-await fetch(
-  "https://docs.google.com/forms/d/e/1FAIpQLSdMeIIj2LqKbFlh2EJvMlmc0JdK85R8RvW2i7ZYQn6tbr5irg/formResponse",
-  {
-    method: "POST",
-    mode: "no-cors",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams({
-      "entry.714234054": name.trim(),
-
-      "entry.822126556":
-        choice === "attending"
-          ? t("confirm")
-          : t("decline"),
-    }),
-  }
-);
-
   if (choice === "attending") {
-  const qrUrl = `${window.location.origin}/scan/${qr_token}`;
-
   localStorage.setItem(
-  "guest_qr",
-  JSON.stringify({
-    name: name.trim(),
-    guestCount: guestCount,
-    qr: qrUrl,
-  })
-);
-
+    "guest_attending",
+    JSON.stringify({
+      name: name.trim(),
+    })
+  );
 
   setState({
-  kind: "qr",
-  name: name.trim(),
-  guestCount: guestCount,
-  qr: qrUrl,
-});
+    kind: "attending",
+    name: name.trim(),
+  });
 } else {
-    localStorage.setItem(
-      "guest_declined",
-      JSON.stringify({
-        name: name.trim(),
-      })
-    );
-
-    setState({
-      kind: "declined",
+  localStorage.setItem(
+    "guest_declined",
+    JSON.stringify({
       name: name.trim(),
-    });
+    })
+  );
+
+  setState({
+    kind: "declined",
+    name: name.trim(),
+  });
 }
+
+
+  
 };
 
 
@@ -161,8 +122,6 @@ await fetch(
           </div>
          <div className="font-arabic text-base text-muted-foreground mb-4">
   {t("welcome")} : {state.name}
-  <br />
-  عدد المرافقين : {state.guestCount}
 </div>
 
 <p className="font-arabic text-sm text-muted-foreground">
@@ -213,102 +172,6 @@ boxShadow: "0 12px 30px rgba(79,93,63,.10)",
       </Reveal>
     );
   }
-if (state.kind === "qr") {
-  return (
-<div className="flex justify-center px-6 pt-10">
-      <div className="w-full max-w-md">
-
-        {/* المربع الرئيسي */}{/* المربع الرئيسي */}
-<div
-  className="rounded-2xl p-6 text-center backdrop-blur-md"
-  style={{
-    background: "#FCFAF8",
-    border: "1px solid #D8C8D9",
-    boxShadow: "0 10px 30px rgba(120, 85, 140, 0.12)",
-  }}
->
-  {/* العنوان */}
-  <div className="flex items-center justify-center gap-3 mb-2">
-  <span
-    className="text-3xl"
-    style={{ color: "#C7A5D9" }}
-  >
-    ༺
-  </span>
-
-  <div
-    className="font-arabic text-3xl font-bold"
-    style={{ color: "#1F1A1F" }}
-  >
-    {t("thanks_attending")}
-  </div>
-
-  <span
-    className="text-3xl"
-    style={{ color: "#C7A5D9" }}
-  >
-    ༻
-  </span>
-</div>
-
-  {/* الاسم */}
-  <div
-    className="font-arabic text-base mb-2"
-style={{ color: "#8E73A6" }}
-  >
-    {t("welcome")} : {state.name}
-  </div>
-
-  {/* عدد المرافقين */}
-  <div
-    className="font-arabic text-base mb-4"
-style={{ color: "#8E73A6" }}
-  >
-    {t("guest_count")} : {state.guestCount}
-  </div>
-
-  {/* مربع الباركود */}
-  <div
-    className="rounded-xl p-2 mb-4 inline-flex"
-    style={{
-      background: "#FFFFFF",
-      border: "1px solid #D8C8D9",
-    }}
-  >
-    <QRCodeCanvas
-      value={state.qr}
-      size={170}
-fgColor="#2F1D38"
-      bgColor="#FFFFFF"
-    />
-  </div>
-
-          {/* التحذير الأحمر */}
-          <div
-            className="rounded-xl p-3"
-            style={{
-              background: "rgba(239, 68, 68, 0.08)",
-              border: "1px solid rgba(220, 38, 38, 0.6)",
-            }}
-          >
-            <p className="text-red-700 font-bold text-sm">
-⚠️ {t("save_qr_warning")}
-            </p>
-          </div>
-
-          {/* الملاحظة الصغيرة */}
-<div
-  className="text-xs mt-2"
-  style={{ color: "#8E73A6" }}
->
-{t("dont_scan_qr")}
-          </div>
-
-        </div>
-      </div>
-    </div>
-  );
-}
   // Form
   return (
     <Reveal>

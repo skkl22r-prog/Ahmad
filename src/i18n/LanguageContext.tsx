@@ -41,7 +41,7 @@ countdown_date: "٣١ يوليو ٢٠٢٦",
   venue_name: "قاعة شهرزاد",
   venue_city: "الطائف",
 
-  hall_name: "شالــيه الجـــازي 301",
+  hall_name: "شالــيه الجـــازي 310",
   hall_city: " ",
   arrival_time: " ",
   open_map: "افتح في الخريطة",

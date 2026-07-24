@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import envelopeVideo from "@/assets/video-output-F33084AB-889B-43FF-A197-8E335CE20FA0-1.mp4";
+import envelopeVideo from "@/assets/video-output-556B5D52-1A13-4FFA-A1D0-DD75651FFE1A-1.mp4";
 
 interface EnvelopeProps {
   onOpen: () => void;

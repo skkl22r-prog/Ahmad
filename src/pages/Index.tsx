@@ -12,6 +12,7 @@ import MusicToggle from "@/components/MusicToggle";
 import dividerImg from "@/assets/Photoroom_20260724_033631.png";
 import locationIcon from "@/assets/Map.png";
 import flowerDivider from "@/assets/Photoroom_20260724_033250.png";
+import receptionImg from "@/assets/Es.png";
 import programIcon from "@/assets/Photoroom_20260724_033314.png";
 import receptionImg from "@/assets/Es.png";
 import dinnerImg from "@/assets/Sh.png";
@@ -485,6 +486,25 @@ href="https://maps.google.com?q=26.0165437,49.9989607"
   }}
 >
 <div className="flex w-max gap-8 px-4">
+  <div className="text-center shrink-0">
+  <img
+    src={receptionImg}
+    alt=""
+    className="w-16 h-auto mx-auto"
+  />
+  <div
+    className="font-arabic text-sm mt-3"
+    style={{ color: "#394132" }}
+  >
+    {t("program_reception")}
+  </div>
+  <div
+    className="font-arabic text-xs mt-1"
+    style={{ color: "#7B8470" }}
+  >
+    {t("reception_time")}
+  </div>
+</div>
 
       <div className="text-center shrink-0">
         <img

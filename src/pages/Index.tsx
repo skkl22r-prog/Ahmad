@@ -250,7 +250,7 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
 
   {t("groom_name")}
 </div>
-<div className={`font-kahand ${
+<div className={`font-tajawal ${
   lang === "ar"
  ? "text-2xl sm:text-3xl"
     : "text-base sm:text-lg"

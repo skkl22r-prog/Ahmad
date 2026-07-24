@@ -241,7 +241,7 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
   <span
   className="font-sull"
   style={{
-    fontSize: lang === "ar" ? "0.35em" : "0.45em",
+    fontSize: lang === "ar" ? "0.65em" : "0.65em",
     margin: "0 18px",
   }}
 >

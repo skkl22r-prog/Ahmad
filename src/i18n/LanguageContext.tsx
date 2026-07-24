@@ -42,7 +42,7 @@ countdown_date: "٣١ يوليو ٢٠٢٦",
   venue_city: "الطائف",
 
   hall_name: "شالــيه الجـــازي 301",
-  hall_city: "شاليه الجازي 310",
+  hall_city: " ",
   arrival_time: " ",
   open_map: "افتح في الخريطة",
   add_calendar: "إضافة إلى التقويم",

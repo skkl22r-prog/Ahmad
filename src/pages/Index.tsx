@@ -52,13 +52,18 @@ const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
 const onTouchEnd = () => {
   dragging.current = false;
 };
-useEffect(() => {
+  useEffect(() => {
   const hint = document.getElementById("scrollHint");
 
   const hideHint = () => {
-    if (window.scrollY > 30 && hint) {
+    if (!hint) return;
+
+    if (window.scrollY > 30) {
       hint.style.opacity = "0";
-      hint.style.transform = "translate(-50%, 20px)";
+      hint.style.visibility = "hidden";
+    } else {
+      hint.style.opacity = "1";
+      hint.style.visibility = "visible";
     }
   };
 

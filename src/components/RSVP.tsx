@@ -110,19 +110,58 @@ try {
     return (
       <Reveal>
         <div
-          className="mx-auto max-w-md rounded-2xl p-8 text-center backdrop-blur-md"
-          style={{
-            background: "hsla(40, 50%, 95%, 0.7)",
-            border: "2px solid hsl(42 75% 55%)",
-            boxShadow: "var(--shadow-elegant), 0 0 40px hsl(42 80% 60% / 0.3)",
+          <div
+  className="mx-auto max-w-md rounded-2xl p-8 text-center backdrop-blur-md"
+  style={{
+    background: "#FFFEFC",
+    border: "1px solid #D7D8CC",
+    boxShadow: "0 12px 30px rgba(79,93,63,.10)",
+  }}
+>
           }}
         >
-          <div className="font-arabic text-2xl text-primary mb-4" style={{ fontWeight: 700 }}>
-            نسعد بحضورك 🌸
-          </div>
-         <div className="font-arabic text-base text-muted-foreground mb-4">
-  {t("welcome")} : {state.name}
+         <Heart
+  className="mx-auto w-10 h-10 mb-4"
+  style={{
+    color: "#687451",
+    fill: "#687451",
+  }}
+/>
+
+<div
+  className="font-arabic text-2xl mb-4"
+  style={{
+    color: "#394132",
+    fontWeight: 700,
+  }}
+>
+  نسعد بحضورك
 </div>
+        <p
+  className="font-arabic text-xl leading-loose"
+  style={{ color: "#394132" }}
+>
+  {t("welcome")}
+  <br />
+
+  <span
+    style={{
+      color: "#687451",
+      fontWeight: 700,
+    }}
+  >
+    {state.name}
+  </span>
+
+  <br />
+
+  <span
+    className="text-base"
+    style={{ color: "#7B8470" }}
+  >
+    {t("thanks_attending")}
+  </span>
+</p>
 
 <p className="font-arabic text-sm text-muted-foreground">
   {t("thanks_attending")}
@@ -146,8 +185,8 @@ boxShadow: "0 12px 30px rgba(79,93,63,.10)",
 <Heart
   className="mx-auto w-10 h-10 mb-4"
   style={{
-    color: "#A882B8",
-    fill: "#A882B8",
+    color: "#687451",
+    fill: "#687451",
   }}
 />
 <p
@@ -159,7 +198,7 @@ boxShadow: "0 12px 30px rgba(79,93,63,.10)",
 
 <span
   style={{
-    color: "#A882B8",
+    color: "#687451",
     fontWeight: 700,
   }}
 >

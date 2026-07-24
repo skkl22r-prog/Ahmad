@@ -220,12 +220,20 @@
     60% { opacity: 0.95; transform: translate(-50%, -50%) scale(0.95); }
     100% { opacity: 0.85; transform: translate(-50%, -50%) scale(1); }
   }
-  @keyframes textReveal {
+ @keyframes textReveal {
   from {
     opacity: 0;
     transform: translateY(35px);
     filter: blur(6px);
   }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
 @keyframes scrollHint {
   0% {
     opacity: .35;
@@ -242,13 +250,6 @@
     transform: translate(-50%, 0);
   }
 }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
 .text-reveal {
   opacity: 0;
   animation: textReveal 1.2s ease 0.2s forwards;

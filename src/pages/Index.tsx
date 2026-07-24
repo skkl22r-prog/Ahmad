@@ -30,7 +30,6 @@ const scrollRef = useRef<HTMLDivElement>(null);
 const startX = useRef(0);
 const startScroll = useRef(0);
 const dragging = useRef(false);
-  const [videoReady, setVideoReady] = useState(false);
 const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
   const el = scrollRef.current;
   if (!el) return;
@@ -91,6 +90,13 @@ className="hidden"
           backgroundSize: "150px 150px",
         }}
       />
+   {!opened && (
+  <img
+    src={sosImg}
+    alt=""
+    className="fixed inset-0 w-full h-full object-cover z-40 pointer-events-none"
+  />
+)}
 {opened && <SprayParticles />}
       <MusicToggle active={opened} />
 <Envelope onOpen={() => setOpened(true)} />
@@ -157,7 +163,6 @@ border:"1px solid #D7D8CC",
   muted
   loop
   playsInline
-  onLoadedData={() => setVideoReady(true)}
   className="absolute inset-0 w-full h-full object-cover animate-videoFade"
   style={{
 background:"#F7F5F0",

@@ -30,6 +30,7 @@ const scrollRef = useRef<HTMLDivElement>(null);
 const startX = useRef(0);
 const startScroll = useRef(0);
 const dragging = useRef(false);
+  const [hideScrollHint, setHideScrollHint] = useState(false);
 const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
   const el = scrollRef.current;
   if (!el) return;
@@ -51,26 +52,15 @@ const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
 
 const onTouchEnd = () => {
   dragging.current = false;
-};
-  useEffect(() => {
-  const hint = document.getElementById("scrollHint");
-  if (!hint) return;
-
-  const hideHint = () => {
-    if (window.scrollY > 30) {
-      hint.style.opacity = "0";
-      hint.style.transform = "translate(-50%, 20px)";
-    } else {
-      hint.style.opacity = "1";
-      hint.style.transform = "translate(-50%, 0)";
-    }
+};useEffect(() => {
+  const onScroll = () => {
+    setHideScrollHint(window.scrollY > 30);
   };
 
-  hideHint();
-  window.addEventListener("scroll", hideHint, { passive: true });
+  window.addEventListener("scroll", onScroll, { passive: true });
 
   return () => {
-    window.removeEventListener("scroll", hideHint);
+    window.removeEventListener("scroll", onScroll);
   };
 }, []);
   return (
@@ -305,13 +295,18 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
 </div>
 </div>
   <div
+  <div
   id="scrollHint"
   className="absolute left-1/2 -translate-x-1/2 bottom-2 z-50 flex flex-col items-center pointer-events-none"
   style={{
     color: "#FFFFFF",
     textShadow: "0 2px 10px rgba(0,0,0,.45)",
-    animation: "scrollHint 1.8s ease-in-out infinite",
-    transition: "all .5s ease",
+    animation: hideScrollHint ? "none" : "scrollHint 2.8s ease-in-out infinite",
+    opacity: hideScrollHint ? 0 : 1,
+    transform: hideScrollHint
+      ? "translate(-50%, 20px)"
+      : "translate(-50%, 0)",
+    transition: "opacity .5s ease, transform .5s ease",
   }}
 >
   <span className="font-tajawal text-sm mb-1">

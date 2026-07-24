@@ -168,7 +168,7 @@ style={{
   {t("invite_to")}
 </div>
 
-<div className={`font-kahand ${
+<div className={`font-tajawal ${
   lang === "ar"
  ? "text-2xl sm:text-3xl"
     : "text-lg sm:text-xl"
@@ -176,7 +176,7 @@ style={{
   {t("invite_join")}
 </div>
 
-<div className={`font-kahand ${
+<div className={`font-tajawal ${
   lang === "ar"
  ? "text-2xl sm:text-3xl"
     : "text-lg sm:text-xl"
@@ -184,7 +184,7 @@ style={{
   {t("invite_day")}
 </div>
 
-<div className={`font-kahand ${
+<div className={`font-tajawal ${
   lang === "ar"
  ? "text-2xl sm:text-3xl"
     : "text-lg sm:text-xl"
@@ -211,7 +211,7 @@ style={{
 </div>
 */}
 
-<div className={`font-kahand ${
+<div className={`font-tajawal ${
   lang === "ar"
  ? "text-2xl sm:text-3xl"
     : "text-lg sm:text-xl"

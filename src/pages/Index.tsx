@@ -251,10 +251,10 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
     ❤︎
   </span>
 
-  <span
-  className="font-sull"
+ <span
+  className={lang === "ar" ? "font-sull" : "font-serif"}
   style={{
-    fontSize: lang === "ar" ? "0.65em" : "0.65em",
+    fontSize: "0.65em",
     margin: "0 18px",
   }}
 >
@@ -655,7 +655,11 @@ href="https://maps.google.com?q=26.0165437,49.9989607"
     {t("designer_name1")}
   </span>
 
-  <span className="font-sull mx-2">
+  <span
+    className={`mx-2 ${
+      lang === "ar" ? "font-sull" : "font-sans"
+    }`}
+  >
     {t("designer_and")}
   </span>
 

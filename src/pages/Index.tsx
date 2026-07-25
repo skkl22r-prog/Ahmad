@@ -647,11 +647,21 @@ href="https://maps.google.com?q=26.0165437,49.9989607"
   style={{ color: "#687451" }}
 />
 
-    <div
-  className="font-iran text-2xl mb-2"
+<div
+  className="text-2xl mb-2"
   style={{ color: "#687451" }}
 >
-  {t("designer_names")}
+  <span className="font-iran">
+    {t("designer_name1")}
+  </span>
+
+  <span className="font-sull mx-2">
+    {t("designer_and")}
+  </span>
+
+  <span className="font-iran">
+    {t("designer_name2")}
+  </span>
 </div>
 
     <div

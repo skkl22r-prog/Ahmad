@@ -94,7 +94,9 @@ dont_scan_qr: "الرجاء عدم مسح الباركود",
   // Footer
   made_by: "صُنع بحب بواسطة ",
   store: " متجر غيمة  ",
-designer_names: "ميعـاد و سلطـان",
+"designer_name1": "ميعاد",
+"designer_and": "و",
+"designer_name2": "سلطان"
 tiktok: "@shim2t.TikTok",
 
   // Calendar
@@ -199,7 +201,9 @@ guest_count: "Number of Companions",
   // Footer
   made_by: "Crafted with love by",
   store: "Ghaimah Store",
-designer_names: "Miaad & Sultan",
+"designer_name1": "Miaad",
+"designer_and": "&",
+"designer_name2": "Sultan"
 tiktok: "@shim2t.TikTok",
   // Calendar
   date_full: "Monday, July 31, 2026",

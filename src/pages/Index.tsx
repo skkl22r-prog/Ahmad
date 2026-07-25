@@ -427,7 +427,7 @@ src="https://www.google.com/maps?q=26.0165437,49.9989607&output=embed"
 
       {/* وقت الحضور */}
     {t("arrival_time").trim() && (
-  <div className="flex items-center justify-center gap-2 mt-3 mb-5">
+<div className="hidden items-center justify-center gap-2 mt-3 mb-5">
     <Clock
       className="w-4 h-4"
       style={{ color: "#687451" }}

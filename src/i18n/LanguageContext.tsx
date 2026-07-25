@@ -94,7 +94,7 @@ dont_scan_qr: "الرجاء عدم مسح الباركود",
   // Footer
   made_by: "صُنع بحب بواسطة ",
   store: " متجر غيمة  ",
-designer_names: "ميعـاد & سلطـان",
+designer_names: "ميعـاد و سلطـان",
 tiktok: "@shim2t.TikTok",
 
   // Calendar

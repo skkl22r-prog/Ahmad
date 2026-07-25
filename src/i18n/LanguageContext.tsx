@@ -96,7 +96,7 @@ dont_scan_qr: "الرجاء عدم مسح الباركود",
   store: " متجر غيمة  ",
 "designer_name1": "ميعاد",
 "designer_and": "و",
-"designer_name2": "سلطان"
+"designer_name2": "سلطان",
 tiktok: "@shim2t.TikTok",
 
   // Calendar
@@ -203,7 +203,7 @@ guest_count: "Number of Companions",
   store: "Ghaimah Store",
 "designer_name1": "Miaad",
 "designer_and": "&",
-"designer_name2": "Sultan"
+"designer_name2": "Sultan",
 tiktok: "@shim2t.TikTok",
   // Calendar
   date_full: "Monday, July 31, 2026",

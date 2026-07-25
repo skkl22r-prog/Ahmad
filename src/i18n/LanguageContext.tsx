@@ -149,7 +149,7 @@ countdown_date: "31 July 2026",
   venue_city: "310",
 
   hall_name: "Al Jazi Chalet",
-  hall_city: "Al Jazi Chalet",
+  hall_city: "  ",
   arrival_time: "Arrival at 8:30 PM",
   open_map: "Open Map",
   add_calendar: "Add to Calendar",

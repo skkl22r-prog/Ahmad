@@ -1,7 +1,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { MapPin, Heart, QrCode, Baby, Camera, Clock } from "lucide-react";
-import invitationImg from "@/assets/video-output-35080D12-B695-4FDA-A7B3-055E037ED0F8-1.mp4";
+import invitationImg from "@/assets/f.mp4";
 import Envelope from "@/components/Envelope";
 import SprayParticles from "@/components/SprayParticles";
 import Reveal from "@/components/Reveal";

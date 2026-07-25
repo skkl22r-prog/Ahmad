@@ -265,7 +265,7 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
 </div>
 <div className={`font-tajawal ${
   lang === "ar"
- ? "text-2xl sm:text-3xl"
+? "text-xl sm:text-2xl"
     : "text-base sm:text-lg"
 }`}>
   {t("invite_god_willing")}

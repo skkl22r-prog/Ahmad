@@ -41,7 +41,7 @@ countdown_date: "١٣ ديسمبر ٢٠٢٦",
   venue_name: "قاعة شهرزاد",
   venue_city: "الطائف",
 
-  hall_name: "قاععــة المخملية للأحتفــالات",
+  hall_name: "قاعــة المخملية للأحتفــالات",
   hall_city: " ",
   arrival_time: " ",
   open_map: "افتح في الخريطة",

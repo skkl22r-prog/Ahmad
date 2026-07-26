@@ -403,7 +403,7 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
       {/* الخريطة */}
       <iframe
 title={t("map_title")}
-src="https://www.google.com/maps?q=26.0165437,49.9989607&output=embed"
+src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالات+الرياض&output=embed"
         width="100%"
         height="230"
         loading="lazy"

@@ -338,20 +338,22 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
     />
 
     <h2
-      className="font-arabic text-3xl"
-      style={{ color: "#394132" }}
-    >
-{t("details_title")}
-    </h2>
+  className="font-arabic text-3xl"
+  style={{ color: "#A67C2E" }}
+>
+  {t("details_title")}
+</h2>
+
+<div
 
    <div
   className="font-arabic text-sm mt-2"
-  style={{ color: "#7B8470" }}
+  style={{ color: "#7C7367" }}
 >
   {t("details_subtitle")}
 </div>
 
-    <img
+<img
       src={flowerDivider}
       alt=""
       className="mx-auto mt-4 mb-6 w-16 h-auto select-none"
@@ -367,14 +369,14 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
       transformOrigin: "top center",
     }}
   >
-    <div
-      className="max-w-sm mx-auto rounded-3xl p-4"
-      style={{
-        background: "#FFFEFC",
-        border: "1px solid #D7D8CC",
-        boxShadow:"0 12px 30px rgba(79,93,63,.10)",
-      }}
-    >
+   <div
+  className="max-w-sm mx-auto rounded-3xl p-4"
+  style={{
+    background: "#FFFFFF",
+    border: "1px solid #E7D8B7",
+    boxShadow:"0 12px 30px rgba(200,169,106,.12)",
+  }}
+>
       {/* اسم القاعة */}
       <div className="flex items-center justify-center gap-2 mb-4">
         <img
@@ -384,12 +386,12 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
         />
 
         <span
-          className="font-arabic text-sm"
-          style={{
-            color: "#394132",
-            fontWeight: 600,
-          }}
-        >
+  className="font-arabic text-sm"
+  style={{
+    color: "#A67C2E",
+    fontWeight: 600,
+  }}
+>
 {t("hall_name")}
         </span>
       </div>
@@ -409,13 +411,13 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
 
       {/* اسم الموقع */}
       <div
-        className="text-center mt-4 font-arabic"
-        style={{
-          color: "#394132",
-          fontSize: "15px",
-          fontWeight: 600,
-        }}
-      >
+  className="text-center mt-4 font-arabic"
+  style={{
+    color: "#2F2A24",
+    fontSize: "15px",
+    fontWeight: 600,
+  }}
+>
 {t("hall_city")}
       </div>
 
@@ -438,34 +440,34 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
       {/* الأزرار */}
       <div className="grid grid-cols-2 gap-3">
         <a
-href="https://maps.google.com?q=26.0165437,49.9989607"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="py-3 rounded-xl text-center font-arabic text-sm"
-          style={{
-            background: "#FFFFFF",
-            border: "1px solid #C8CFBF",
-            color: "#536042",
-            fontWeight: 600,
-            textDecoration: "none",
-          }}
-        >
+  href="https://maps.google.com?q=26.0165437,49.9989607"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="py-3 rounded-xl text-center font-arabic text-sm"
+  style={{
+    background: "#FFFFFF",
+    border: "1px solid #E7D8B7",
+    color: "#A67C2E",
+    fontWeight: 600,
+    textDecoration: "none",
+  }}
+>
 {t("open_map")}
         </a>
 
         <a
-          href="/event.ics"
-          className="py-3 rounded-xl text-center font-arabic text-sm"
-          style={{
-            background: "#536042",
-            color: "#FFF",
-            fontWeight: 600,
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+  href="/event.ics"
+  className="py-3 rounded-xl text-center font-arabic text-sm"
+  style={{
+    background: "#C8A96A",
+    color: "#FFFFFF",
+    fontWeight: 600,
+    textDecoration: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
 {t("add_calendar")}
         </a>
       </div>
@@ -638,12 +640,12 @@ href="https://maps.google.com?q=26.0165437,49.9989607"
 
    <Heart
   className="w-5 h-5 fill-current mx-auto mb-3"
-  style={{ color: "#687451" }}
+  style={{ color: "#C8A96A" }}
 />
 
 <div
   className="text-2xl mb-2"
-  style={{ color: "#687451" }}
+  style={{ color: "#A67C2E" }}
 >
   <span className="font-iran">
     {t("designer_name1")}
@@ -663,28 +665,28 @@ href="https://maps.google.com?q=26.0165437,49.9989607"
 </div>
 
     <div
-      className="font-arabic text-sm"
-      style={{ color: "#394132" }}
-    >
-      {t("made_by")}
+  className="font-arabic text-sm"
+  style={{ color: "#2F2A24" }}
+>
+  {t("made_by")}
       <a
-        href="https://www.tiktok.com/@shim2t?_r=1&_t=ZS-95w0d8f7vnk"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline underline-offset-4 transition-colors"
-        style={{ color: "#394132" }}
-      >
+  href="https://www.tiktok.com/@shim2t?_r=1&_t=ZS-95w0d8f7vnk"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="underline underline-offset-4 transition-colors"
+  style={{ color: "#A67C2E" }}
+>
         {t("store")}
       </a>
     </div>
 
     <a
-      href="https://www.tiktok.com/@shim2t?_r=1&_t=ZS-95w0d8f7vnk"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block mt-2 text-sm underline underline-offset-4"
-      style={{ color: "#687451" }}
-    >
+  href="https://www.tiktok.com/@shim2t?_r=1&_t=ZS-95w0d8f7vnk"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block mt-2 text-sm underline underline-offset-4"
+  style={{ color: "#A67C2E" }}
+>
       @shim2t.TikTok
     </a>
 

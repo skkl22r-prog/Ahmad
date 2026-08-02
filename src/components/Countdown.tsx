@@ -36,14 +36,14 @@ const { t: translate, lang } = useLang();
           key={it.l}
           className="flex flex-col items-center justify-center rounded-xl px-4 sm:px-6 py-4 min-w-[70px] sm:min-w-[90px] backdrop-blur-md"
           style={{
-  background: "#FFFEFC",
-  border: "1px solid #D7D8CC",
-  boxShadow: "0 12px 30px rgba(79,93,63,.10)",
+  background: "#FFFFFF",
+  border: "1px solid #E7D8B7",
+  boxShadow: "0 12px 30px rgba(200,169,106,.12)",
 }}
         >
           <div
   className="font-display text-3xl sm:text-4xl font-light tabular-nums"
-style={{ color: "#394132" }}
+  style={{ color: "#A67C2E" }}
 >
 {lang === "ar"
   ? String(it.v).padStart(2, "0").replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d])
@@ -51,10 +51,10 @@ style={{ color: "#394132" }}
 }
           </div>
 
-          <div
-            className="text-xs uppercase tracking-widest mt-1"
-style={{ color: "#7B8470" }}
-          >
+         <div
+  className="text-xs uppercase tracking-widest mt-1"
+  style={{ color: "#7C7367" }}
+>
             {it.l}
           </div>
         </div>

@@ -67,7 +67,7 @@ const onTouchEnd = () => {
  <div
   className="overflow-x-hidden w-full"
   style={{
-background: "linear-gradient(180deg, #FCFBF8 0%, #F7F5F0 50%, #FCFBF8 100%)",
+background: "linear-gradient(180deg, #FCFBF8 0%, #FFFFFF 50%, #FCFBF8 100%)",
     minHeight: "100vh",
   }}
 >
@@ -85,13 +85,7 @@ className="hidden"
       <MusicToggle active={opened} />
 <Envelope onOpen={() => setOpened(true)} />
 
-<div
-  className="fixed inset-0 z-0"
-  style={{
-background:"#F7F5F0",
-    pointerEvents: "none",
-  }}
-/>
+
 
 {opened && (
   <main
@@ -306,22 +300,22 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
           {/* Countdown */}
         <section className="px-4 py-16">
   <Reveal>
-    <p
-      className="text-center font-arabic text-sm mb-2"
-      style={{ color: "#7B8470" }}
-    >
-{t("countdown_date")}
-    </p>
+  <p
+    className="text-center font-arabic text-sm mb-2"
+    style={{ color: "#7C7367" }}
+  >
+    {t("countdown_date")}
+  </p>
 
     <h2
-      className="text-center font-arabic text-3xl mb-10"
-      style={{ color: "#394132" }}
-    >
+    className="text-center font-arabic text-3xl mb-10"
+    style={{ color: "#A67C2E" }}
+  >
     {t("countdown_title")}
-    </h2>
-  </Reveal>
+  </h2>
+</Reveal>
 
-  <Reveal delay={150}>
+<Reveal delay={150}>
     <Countdown />
   </Reveal>
 </section>

@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { MapPin, Heart, QrCode, Baby, Camera, Clock } from "lucide-react";
 import invitationImg from "@/assets/video-output-35080D12-B695-4FDA-A7B3-055E037ED0F8-1.mp4";
@@ -15,7 +14,6 @@ import locationIcon from "@/assets/Map.png";
 import flowerDivider from "@/assets/Photoroom_20260724_033250.png";
 import receptionImg from "@/assets/Es.png";
 import programIcon from "@/assets/Photoroom_20260724_033314.png";
-import receptionImg from "@/assets/Es.png";
 import dinnerImg from "@/assets/Sh.png";
 import zaffaImg from "@/assets/Zf.png";
 import phoneImg from "@/assets/Joo.png";
@@ -345,8 +343,6 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
 </h2>
 
 <div
-
-   <div
   className="font-arabic text-sm mt-2"
   style={{ color: "#7C7367" }}
 >

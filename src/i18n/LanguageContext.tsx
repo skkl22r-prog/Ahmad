@@ -58,7 +58,7 @@ countdown_date: "٢٩ أغسطس ٢٠٢٦",
  "dinner_time": "الساعة ١٠:٠٠ صباحاً",
   no_cameras: "يمنع التصوير",
   no_kids: "يمنع اصطحاب الأطفال",
-  swipe_more: "اسحب لرؤية المزيد",
+  swipe_more: " ",
 
   // RSVP
   rsvp_title: "الدعوة شخصية",
@@ -156,7 +156,7 @@ countdown_date: "29 August 2026",
 
   // Program
   program_title: "Event Program",
-  program_subtitle: "Our schedule for the special day",
+  program_subtitle: " ",
  "program_reception": "Reception",
 "reception_time": "8:00 PM",
   program_zaffa: "Bridal Entrance",
@@ -165,12 +165,12 @@ countdown_date: "29 August 2026",
  "dinner_time": "10:00 PM",
   no_cameras: "No Photography",
   no_kids: "Children are not permitted",
-  swipe_more: "Swipe to see more",
+  swipe_more: " ",
 
   // RSVP
   rsvp_title: "Personal Invitation",
   rsvp_sub: "We would be honored by your presence",
-  rsvp_deadline: "Please respond before July 29, 2026",
+  rsvp_deadline: "We would be honored by your presence",
 
   name_label: "Full Name",
   name_placeholder: "Enter your name",

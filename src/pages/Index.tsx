@@ -632,69 +632,65 @@ style={{ color: "#A67C2E" }}
 </section>
 
           {/* Footer */}
-          <footer className="px-4 py-12 text-center">
+<footer className="px-4 py-12 text-center">
   <Reveal>
+    <div className="flex flex-col items-center gap-1">
+      <div
+        className="text-lg inline-flex items-center gap-1.5"
+        style={{ color: "#A67C2E" }}
+      >
+        <span className="font-iran">
+          {t("designer_name1")}
+        </span>
+        <span
+          className={`${
+            lang === "ar" ? "font-sull" : "font-sans"
+          }`}
+        >
+          {t("designer_and")}
+        </span>
+        <span className="font-iran">
+          {t("designer_name2")}
+        </span>
+      </div>
 
-   <Heart
-  className="w-5 h-5 fill-current mx-auto mb-3"
-  style={{ color: "#C8A96A" }}
-/>
+      <a
+        href="https://www.tiktok.com/@shim2t?_r=1&_t=ZS-95w0d8f7vnk"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex flex-col items-center mt-2"
+        style={{ textDecoration: "none" }}
+      >
+        <div className="flex items-center gap-1">
+          <img
+            src={gaimIcon}
+            alt="Gaim Store Icon"
+            className="w-4 h-4" // تم تصغير الأيقونة من w-6 الى w-4
+          />
 
-<div
-  className="text-2xl mb-2"
-  style={{ color: "#A67C2E" }}
->
-  <span className="font-iran">
-    {t("designer_name1")}
-  </span>
+          <span
+            className="font-arabic text-base"
+            style={{
+              fontWeight: 400,
+              color: "#A67C2E",
+            }}
+          >
+            {t("store")}
+            <span style={{ color: "#C8A96A", marginLeft: "4px" }}>&#8599;</span>
+          </span>
+        </div>
 
-  <span
-    className={`mx-2 ${
-      lang === "ar" ? "font-sull" : "font-sans"
-    }`}
-  >
-    {t("designer_and")}
-  </span>
-
-  <span className="font-iran">
-    {t("designer_name2")}
-  </span>
-</div>
-
-<a
-  href="https://www.tiktok.com/@shim2t?_r=1&_t=ZS-95w0d8f7vnk"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex flex-col items-center mt-3"
-  style={{ textDecoration: "none" }}
->
-  <div className="flex items-center gap-2">
-    <img
-      src={gaimIcon}
-      alt=""
-      className="w-6 h-6"
-    />
-
-    <span
-  className="font-arabic text-lg"
-  style={{
-    fontWeight: 400,
-    color: "#A67C2E",
-  }}
->
-  {t("store")}
-</span>
-  </div>
-
-  <span
-    className="mt-1 text-sm"
-    style={{ color: "#7C7367" }}
-  >
-&#8599; TikTok @shim2t
-  </span>
-</a>
+        <span
+          className="mt-0.5 text-xs"
+          style={{ color: "#7C7367" }}
+        >
+          TikTok @shim2t
+        </span>
+      </a>
+    </div>
   </Reveal>
-          </footer>
+</footer>
+
         </main>
       )}
     </div>

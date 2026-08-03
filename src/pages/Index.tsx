@@ -97,17 +97,17 @@ className="hidden"
  dir="ltr"
   className="fixed top-5 right-5 z-[9999] flex p-1 rounded-xl"
   style={{
-    background: "#F7F5F0",
-border:"1px solid #D7D8CC",
-    boxShadow: "0 4px 12px rgba(0,0,0,.08)",
-  }}
+  background: "rgba(255,255,255,0.92)",
+  border: "1px solid #E7D8B7",
+  boxShadow: "0 8px 25px rgba(200,169,106,.15)",
+}}
 >
   <button
   onClick={() => lang !== "en" && toggle()}
   className="px-3 py-1 rounded-lg text-sm font-semibold transition-all"
   style={{
-    background: lang === "en" ? "#687451" : "transparent",
-    color: lang === "en" ? "#fff" : "#6E7562",
+    background: lang === "en" ? "#C8A96A" : "transparent",
+color: lang === "en" ? "#FFFFFF" : "#A67C2E",
   }}
 >
   EN
@@ -117,8 +117,8 @@ border:"1px solid #D7D8CC",
   onClick={() => lang !== "ar" && toggle()}
   className="px-3 py-1 rounded-lg text-sm font-semibold transition-all"
   style={{
-    background: lang === "ar" ? "#687451" : "transparent",
-    color: lang === "ar" ? "#fff" : "#6E7562",
+    background: lang === "en" ? "#C8A96A" : "transparent",
+color: lang === "en" ? "#FFFFFF" : "#A67C2E",
   }}
 >
   AR
@@ -561,7 +561,7 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
         </div>
       </div>
 
-      <div className="text-center shrink-0">
+<div className="hidden">
        <img
   src={phoneImg}
   alt=""
@@ -575,7 +575,7 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
         </div>
       </div>
 
-      <div className="text-center shrink-0">
+<div className="hidden">
         <img
           src={kidsImg}
           alt=""

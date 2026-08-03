@@ -41,14 +41,14 @@ const MusicToggle = ({ active }: Props) => {
         className="fixed bottom-4 left-4 z-50 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all hover:scale-110"
         style={{
   background: "rgba(255, 254, 252, 0.85)",
-  border: "1.5px solid #D7D8CC",
+border: "1.5px solid #E7D8B7",
   boxShadow: "0 8px 25px rgba(79, 93, 63, 0.10)",
 }}
       >
         {playing ? (
-<Volume2 className="w-5 h-5" style={{ color: "#394132" }} />
+<Volume2 className="w-5 h-5" style={{ color: "#A67C2E" }} />
         ) : (
-<VolumeX className="w-5 h-5" style={{ color: "#394132" }} />
+<VolumeX className="w-5 h-5" style={{ color: "#A67C2E" }} />
         )}
       </button>
     </>

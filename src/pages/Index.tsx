@@ -117,8 +117,8 @@ color: lang === "en" ? "#FFFFFF" : "#A67C2E",
   onClick={() => lang !== "ar" && toggle()}
   className="px-3 py-1 rounded-lg text-sm font-semibold transition-all"
   style={{
-    background: lang === "en" ? "#C8A96A" : "transparent",
-color: lang === "en" ? "#FFFFFF" : "#A67C2E",
+    background: lang === "ar" ? "#C8A96A" : "transparent",
+    color: lang === "ar" ? "#FFFFFF" : "#A67C2E",
   }}
 >
   AR
@@ -690,7 +690,7 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
     className="mt-1 text-sm"
     style={{ color: "#7C7367" }}
   >
-&#x2197; TikTok @shim2t
+&#8599; TikTok @shim2t
   </span>
 </a>
   </Reveal>

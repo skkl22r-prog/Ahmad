@@ -676,21 +676,21 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
     />
 
     <span
-      className="font-arabic text-lg"
-      style={{
-        color: "#A67C2E",
-        fontWeight: 700,
-      }}
-    >
-      {t("store")}
-    </span>
+  className="font-arabic text-lg"
+  style={{
+    fontWeight: 400,
+    color: "#A67C2E",
+  }}
+>
+  {t("store")}
+</span>
   </div>
 
   <span
     className="mt-1 text-sm"
     style={{ color: "#7C7367" }}
   >
-    ↗ TikTok @shim2t
+&#x2197; TikTok @shim2t
   </span>
 </a>
   </Reveal>

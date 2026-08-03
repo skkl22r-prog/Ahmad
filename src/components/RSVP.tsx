@@ -135,14 +135,14 @@ const RSVP = () => {
             className="block font-arabic text-sm mb-2"
             style={{ color: "#2F2A24" }}
           >
-            الاسم الكريم
+ {t("name_label")}
           </label>
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
             maxLength={60}
-            placeholder="أدخل اسمك الكريم"
+placeholder={t("name_placeholder")}
             className="w-full px-4 py-3 rounded-xl font-arabic text-right outline-none transition-all focus:border-[#A67C2E]"
             style={{
               background: "#FCFBF8",
@@ -158,14 +158,14 @@ const RSVP = () => {
             className="block font-arabic text-sm mb-2"
             style={{ color: "#2F2A24" }}
           >
-            رسالة إلى العروسين
+ {t("message_label")}
           </label>
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             maxLength={300}
             rows={4}
-            placeholder="اكتب تهنئتك أو رسالتك هنا..."
+placeholder={t("message_placeholder")}
             className="w-full px-4 py-3 rounded-xl font-arabic text-right outline-none transition-all resize-none focus:border-[#A67C2E]"
             style={{
               background: "#FCFBF8",
@@ -187,7 +187,7 @@ const RSVP = () => {
             fontWeight: 700,
           }}
         >
-          {state.kind === "loading" ? "جاري الإرسال..." : "إرسال الرسالة"}
+{state.kind === "loading" ? t("sending") : t("send_message")}
         </button>
 
         {state.kind === "error" && (

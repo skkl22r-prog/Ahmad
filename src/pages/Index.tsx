@@ -668,10 +668,7 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
   className="inline-flex flex-col items-center mt-3"
   style={{ textDecoration: "none" }}
 >
-  <div
-    className="flex items-center gap-2"
-    style={{ color: "#394132" }}
-  >
+  <div className="flex items-center gap-2">
     <img
       src={gaimIcon}
       alt=""
@@ -680,7 +677,10 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
 
     <span
       className="font-arabic text-lg"
-      style={{ fontWeight: 700 }}
+      style={{
+        color: "#A67C2E",
+        fontWeight: 700,
+      }}
     >
       {t("store")}
     </span>
@@ -688,12 +688,11 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
 
   <span
     className="mt-1 text-sm"
-    style={{ color: "#A67C2E" }}
+    style={{ color: "#7C7367" }}
   >
     ↗ TikTok @shim2t
   </span>
 </a>
-
   </Reveal>
           </footer>
         </main>

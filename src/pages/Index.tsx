@@ -437,7 +437,7 @@ src="https://www.google.com/maps?q=قصر+ليلة+العمر+للأحتفالا
       {/* الأزرار */}
       <div className="grid grid-cols-2 gap-3">
         <a
-  href="https://maps.google.com?q=26.0165437,49.9989607"
+href="https://www.google.com/maps?q=قصر+ليلة+العمر+للأحتفالات+الدمام"
   target="_blank"
   rel="noopener noreferrer"
   className="py-3 rounded-xl text-center font-arabic text-sm"

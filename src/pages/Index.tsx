@@ -11,7 +11,7 @@ import { ChevronDown } from "lucide-react";
 import MusicToggle from "@/components/MusicToggle";
 import dividerImg from "@/assets/photo-output.png";
 import locationIcon from "@/assets/4.png";
-import flowerDivider from "@/assets/Photoroom_20260724_033250.png";
+import flowerDivider from "@/assets/Photoroom_20260803_031459.png";
 import receptionImg from "@/assets/5.png";
 import programIcon from "@/assets/Photoroom_20260803_042046.png";
 import dinnerImg from "@/assets/1.png";

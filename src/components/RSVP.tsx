@@ -34,19 +34,19 @@ const RSVP = () => {
 
     try {
       await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSdMeIIj2LqKbFlh2EJvMlmc0JdK85R8RvW2i7ZYQn6tbr5irg/formResponse",
-        {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({
-            "entry.714234054": name.trim(),
-            "entry.822126556": message.trim(),
-          }),
-        }
-      );
+  "https://docs.google.com/forms/d/e/1FAIpQLSdKN7zeV3SoXNisF2gEw5X7JIEkUN5ETn7PJcAq2aP85G50OQ/formResponse",
+  {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      "entry.280584690": name.trim(),
+      "entry.196820683": message.trim(),
+    }),
+  }
+);
     } catch {
       setState({
         kind: "error",

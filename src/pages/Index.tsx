@@ -485,7 +485,7 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
 
     <h2
       className="font-arabic text-3xl"
-      style={{ color: "#394132" }}
+style={{ color: "#A67C2E" }}
     >
     {t("program_title")}
     </h2>
@@ -614,7 +614,7 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
 
       <h2
         className="font-arabic text-3xl"
-        style={{ color: "#394132" }}
+style={{ color: "#A67C2E" }}
       >
 {t("rsvp_title")}
       </h2>

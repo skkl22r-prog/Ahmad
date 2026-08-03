@@ -1,302 +1,200 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
 import Reveal from "./Reveal";
 import { useLang } from "@/i18n/LanguageContext";
 
-// 👈 عدّل رقم الواتساب هنا (بصيغة دولية بدون + أو 00). مثال السعودية: 9665XXXXXXXX
-
 type State =
   | { kind: "form" }
   | { kind: "loading" }
-  | { kind: "attending"; name: string }
-  | { kind: "declined"; name: string }
+  | { kind: "success"; name: string }
   | { kind: "error"; msg: string };
+
 const RSVP = () => {
-const { t, lang } = useLang();
+  const { t, lang } = useLang();
   const [name, setName] = useState("");
-  const [choice, setChoice] = useState<"attending" | "declined" | null>(null);
+  const [message, setMessage] = useState("");
   const [state, setState] = useState<State>({ kind: "form" });
-useEffect(() => {
-  const savedAttending = localStorage.getItem("guest_attending");
 
-  if (savedAttending) {
-    const data = JSON.parse(savedAttending);
+  useEffect(() => {
+    const savedSubmission = localStorage.getItem("guest_message_sent");
 
-    setState({
-      kind: "attending",
-      name: data.name,
-    });
-    return;
-  }
-
-  const savedDeclined = localStorage.getItem("guest_declined");
-
-  if (savedDeclined) {
-    const data = JSON.parse(savedDeclined);
-
-    setState({
-      kind: "declined",
-      name: data.name,
-    });
-  }
-}, []);
+    if (savedSubmission) {
+      const data = JSON.parse(savedSubmission);
+      setState({
+        kind: "success",
+        name: data.name,
+      });
+    }
+  }, []);
 
   const submit = async () => {
-  if (!name.trim() || !choice) return;
+    if (!name.trim() || !message.trim()) return;
 
-  setState({ kind: "loading" });
+    setState({ kind: "loading" });
 
-  
-try {
-  await fetch(
-    "https://docs.google.com/forms/d/e/1FAIpQLSdMeIIj2LqKbFlh2EJvMlmc0JdK85R8RvW2i7ZYQn6tbr5irg/formResponse",
-    {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams({
-  "entry.714234054": name.trim(),
-  "entry.822126556":
-    choice === "attending"
-      ? "تاكيد الحضور"
-      : "الاعتذار عن الحضور",
-}),
+    try {
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSdMeIIj2LqKbFlh2EJvMlmc0JdK85R8RvW2i7ZYQn6tbr5irg/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({
+            "entry.714234054": name.trim(),
+            "entry.822126556": message.trim(),
+          }),
+        }
+      );
+    } catch {
+      setState({
+        kind: "error",
+        msg: t("error_try_again"),
+      });
+      return;
     }
-  );
-} catch {
-  setState({
-    kind: "error",
-    msg: t("error_try_again"),
-  });
-  return;
-}
 
-  if (choice === "attending") {
-  localStorage.setItem(
-    "guest_attending",
-    JSON.stringify({
+    localStorage.setItem(
+      "guest_message_sent",
+      JSON.stringify({
+        name: name.trim(),
+      })
+    );
+
+    setState({
+      kind: "success",
       name: name.trim(),
-    })
-  );
-
-  setState({
-    kind: "attending",
-    name: name.trim(),
-  });
-} else {
-  localStorage.setItem(
-    "guest_declined",
-    JSON.stringify({
-      name: name.trim(),
-    })
-  );
-
-  setState({
-    kind: "declined",
-    name: name.trim(),
-  });
-}
-
-
-  
-};
-
+    });
+  };
 
   // ===== Render states =====
 
-  if (state.kind === "attending") {
-    return (
-      <Reveal>
-  <div
-    className="mx-auto max-w-md rounded-2xl p-8 text-center backdrop-blur-md"
-    style={{
-      background: "#FFFEFC",
-      border: "1px solid #D7D8CC",
-      boxShadow: "0 12px 30px rgba(79,93,63,.10)",
-    }}
-  >
-         <Heart
-  className="mx-auto w-10 h-10 mb-4"
-  style={{
-    color: "#687451",
-    fill: "#687451",
-  }}
-/>
-
-<div
-  className="font-arabic text-2xl mb-4"
-  style={{
-    color: "#394132",
-    fontWeight: 700,
-  }}
->
-  نسعد بحضورك
-</div>
-       <p
-  className="font-arabic text-xl leading-loose"
-  style={{ color: "#394132" }}
->
-  {t("welcome")}
-  <br />
-
-  <span
-    style={{
-      color: "#687451",
-      fontWeight: 700,
-    }}
-  >
-    {state.name}
-  </span>
-
-  <br />
-
-  {t("thanks_attending")}
-</p>
-
-</div>
-      </Reveal>
-    );
-  }
-
-  if (state.kind === "declined") {
+  if (state.kind === "success") {
     return (
       <Reveal>
         <div
-          className="mx-auto max-w-md rounded-2xl p-8 text-center backdrop-blur-md"
-style={{
-  background: "#FFFEFC",
-border: "1px solid #D7D8CC",
-boxShadow: "0 12px 30px rgba(79,93,63,.10)",
-}}
+          className="mx-auto max-w-md rounded-2xl p-8 text-center"
+          style={{
+            background: "#FFFFFF",
+            border: "1px solid #E7D8B7",
+            boxShadow: "0 12px 30px rgba(166,124,46,.12)",
+          }}
         >
-<Heart
-  className="mx-auto w-10 h-10 mb-4"
-  style={{
-    color: "#687451",
-    fill: "#687451",
-  }}
-/>
-<p
-  className="font-arabic text-xl leading-loose"
-  style={{ color: "#394132" }}
->
-{t("thanks_declined")}
-<br />
+          <Heart
+            className="mx-auto w-10 h-10 mb-4"
+            style={{
+              color: "#A67C2E",
+              fill: "#A67C2E",
+            }}
+          />
 
-<span
-  style={{
-    color: "#687451",
-    fontWeight: 700,
-  }}
->
-  {state.name}
-</span>
+          <div
+            className="font-arabic text-2xl mb-4"
+            style={{
+              color: "#2F2A24",
+              fontWeight: 700,
+            }}
+          >
+            شكراً لك
+          </div>
+
+          <p
+            className="font-arabic text-xl leading-loose"
+            style={{ color: "#2F2A24" }}
+          >
+            <span
+              style={{
+                color: "#A67C2E",
+                fontWeight: 700,
+              }}
+            >
+              {state.name}
+            </span>
             <br />
-{t("see_you_next_time")}
+            وصلت رسالتك بكل حب إلى العروسين
           </p>
         </div>
       </Reveal>
     );
   }
+
   // Form
   return (
     <Reveal>
-<div
-  className="rounded-2xl p-6 text-center backdrop-blur-md"
-  style={{
-    background: "#FFFEFC",
-border: "1px solid #D7D8CC",
-boxShadow: "0 12px 30px rgba(79,93,63,.10)",
-  }}
+      <div
+        className="mx-auto max-w-md rounded-2xl p-6 text-center"
+        style={{
+          background: "#FFFFFF",
+          border: "1px solid #E7D8B7",
+          boxShadow: "0 12px 30px rgba(166,124,46,.12)",
+        }}
       >
-        <label
-  className="block font-arabic text-sm mb-2 text-right"
-  style={{ color: "#394132" }}
->
-{t("name_label")}
-</label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          maxLength={60}
-placeholder={t("name_placeholder")}
-          className="w-full px-4 py-3 rounded-xl font-arabic text-right outline-none transition-colors"
-          style={{
-            background: "#FFFFFF",
-border: "1px solid #D7D8CC",
-color: "#394132",
-          }}
-          dir={lang === "ar" ? "rtl" : "ltr"}
-/>
-
-
-<div className="grid grid-cols-2 gap-3 mt-5">
-  <button
-    onClick={() => setChoice("attending")}
-    className="py-3 rounded-xl font-arabic text-sm transition-all flex items-center justify-center gap-2"
-    style={{
-background:
-choice === "attending"
-? "#687451"
-: "#F7F5F0",
-
-color:
-choice === "attending"
-? "#FFFFFF"
-: "#394132",
-
-border: "1px solid #D7D8CC",
-
-boxShadow:
-choice === "attending"
-? "0 0 18px rgba(79,93,63,.18)"
-: "none",
-    }}
-  >
-
-{t("confirm")}
-          </button>
-          <button
-            onClick={() => setChoice("declined")}
-className="py-3 rounded-xl font-arabic text-sm transition-all flex items-center justify-center"
-            style={{
-              background:
-choice === "declined"
-? "#687451"
-: "#F7F5F0",
-
-color:
-choice === "declined"
-? "#FFFFFF"
-: "#394132",
-
-border: "1px solid #D7D8CC",
-            }}
+        <div className="mb-4 text-right">
+          <label
+            className="block font-arabic text-sm mb-2"
+            style={{ color: "#2F2A24" }}
           >
+            الاسم الكريم
+          </label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            maxLength={60}
+            placeholder="أدخل اسمك الكريم"
+            className="w-full px-4 py-3 rounded-xl font-arabic text-right outline-none transition-all focus:border-[#A67C2E]"
+            style={{
+              background: "#FCFBF8",
+              border: "1px solid #E7D8B7",
+              color: "#2F2A24",
+            }}
+            dir={lang === "ar" ? "rtl" : "ltr"}
+          />
+        </div>
 
-{t("decline")}
-          </button>
+        <div className="mb-5 text-right">
+          <label
+            className="block font-arabic text-sm mb-2"
+            style={{ color: "#2F2A24" }}
+          >
+            رسالة إلى العروسين
+          </label>
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            maxLength={300}
+            rows={4}
+            placeholder="اكتب تهنئتك أو رسالتك هنا..."
+            className="w-full px-4 py-3 rounded-xl font-arabic text-right outline-none transition-all resize-none focus:border-[#A67C2E]"
+            style={{
+              background: "#FCFBF8",
+              border: "1px solid #E7D8B7",
+              color: "#2F2A24",
+            }}
+            dir={lang === "ar" ? "rtl" : "ltr"}
+          />
         </div>
 
         <button
           onClick={submit}
-          disabled={!name.trim() || !choice || state.kind === "loading"}
-className="w-full mt-5 py-3 rounded-xl font-arabic text-base transition-all hover:scale-[1.02] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
+          disabled={!name.trim() || !message.trim() || state.kind === "loading"}
+          className="w-full py-3 rounded-xl font-arabic text-base transition-all hover:scale-[1.02] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
           style={{
-            background: "#687451",
-color: "#FFFFFF",
-boxShadow: "0 4px 18px rgba(79,93,63,.18)",
+            background: "#C8A96A",
+            color: "#FFFFFF",
+            boxShadow: "0 4px 18px rgba(200,169,106,.2)",
             fontWeight: 700,
           }}
         >
-          {state.kind === "loading" ? t("sending") : t("send")}
+          {state.kind === "loading" ? "جاري الإرسال..." : "إرسال الرسالة"}
         </button>
 
         {state.kind === "error" && (
-          <p className="font-arabic text-sm text-center mt-3" style={{ color: "hsl(0 70% 45%)" }}>
+          <p
+            className="font-arabic text-sm text-center mt-3"
+            style={{ color: "hsl(0 70% 45%)" }}
+          >
             {state.msg}
           </p>
         )}

@@ -631,7 +631,7 @@ style={{ color: "#A67C2E" }}
   <RSVP />
 </section>
 
-          {/* Footer */}
+         {/* Footer */}
 <footer className="px-4 py-12 text-center">
   <Reveal>
     <div className="flex flex-col items-center gap-1">
@@ -665,7 +665,7 @@ style={{ color: "#A67C2E" }}
           <img
             src={gaimIcon}
             alt="Gaim Store Icon"
-            className="w-4 h-4" // تم تصغير الأيقونة من w-6 الى w-4
+            className="w-4 h-4"
           />
 
           <span
@@ -676,20 +676,34 @@ style={{ color: "#A67C2E" }}
             }}
           >
             {t("store")}
-            <span style={{ color: "#C8A96A", marginLeft: "4px" }}>&#8599;</span>
           </span>
         </div>
 
         <span
-          className="mt-0.5 text-xs"
+          className="mt-0.5 text-xs inline-flex items-center gap-1"
           style={{ color: "#7C7367" }}
         >
           TikTok @shim2t
+          <svg
+            className="w-3 h-3"
+            fill="none"
+            stroke="#C8A96A"
+            strokeWidth="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M7 17L17 7M17 7H7M17 7v10"
+            ></path>
+          </svg>
         </span>
       </a>
     </div>
   </Reveal>
 </footer>
+
 
         </main>
       )}

@@ -350,11 +350,11 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
 </div>
 
 <img
-      src={flowerDivider}
-      alt=""
-      className="mx-auto mt-4 mb-6 w-16 h-auto select-none"
-      draggable={false}
-    />
+  src={flowerDivider}
+  alt=""
+  className="mx-auto mt-4 mb-6 w-24 h-auto select-none"
+  draggable={false}
+/>
   </div>
 </Reveal>
 
@@ -475,12 +475,12 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
           <section className="px-4 py-16">
   <Reveal>
   <div className="text-center mb-10">
-    <img
-      src={programIcon}
-      alt=""
-      className="mx-auto mb-4 w-20 h-auto select-none"
-      draggable={false}
-    />
+   <img
+  src={programIcon}
+  alt=""
+  className="mx-auto mb-5 w-32 h-auto select-none"
+  draggable={false}
+/>
 
     <h2
       className="font-arabic text-3xl"
@@ -605,11 +605,11 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
   <Reveal>
     <div className="text-center mb-10">
       <img
-        src={rsvpIcon}
-        alt=""
-        className="mx-auto mb-4 w-16 h-auto select-none"
-        draggable={false}
-      />
+  src={rsvpIcon}
+  alt=""
+  className="mx-auto mb-5 w-28 h-auto select-none"
+  draggable={false}
+/>
 
       <h2
         className="font-arabic text-3xl"

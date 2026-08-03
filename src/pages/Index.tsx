@@ -7,6 +7,7 @@ import Reveal from "@/components/Reveal";
 import Countdown from "@/components/Countdown";
 import Timeline from "@/components/Timeline";
 import RSVP from "@/components/RSVP";
+import gaimIcon from "@/assets/gaim.svg";
 import { ChevronDown } from "lucide-react";
 import MusicToggle from "@/components/MusicToggle";
 import dividerImg from "@/assets/photo-output.png";
@@ -660,31 +661,38 @@ src="https://www.google.com/maps?q=قاعة+المخملية+للاحتفالا�
   </span>
 </div>
 
-    <div
-  className="font-arabic text-sm"
-  style={{ color: "#2F2A24" }}
->
-  {t("made_by")}
-      <a
+<a
   href="https://www.tiktok.com/@shim2t?_r=1&_t=ZS-95w0d8f7vnk"
   target="_blank"
   rel="noopener noreferrer"
-  className="underline underline-offset-4 transition-colors"
-  style={{ color: "#A67C2E" }}
+  className="inline-flex flex-col items-center mt-3"
+  style={{ textDecoration: "none" }}
 >
-        {t("store")}
-      </a>
-    </div>
+  <div
+    className="flex items-center gap-2"
+    style={{ color: "#394132" }}
+  >
+    <img
+      src={gaimIcon}
+      alt=""
+      className="w-6 h-6"
+    />
 
-    <a
-  href="https://www.tiktok.com/@shim2t?_r=1&_t=ZS-95w0d8f7vnk"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="block mt-2 text-sm underline underline-offset-4"
-  style={{ color: "#A67C2E" }}
->
-      @shim2t.TikTok
-    </a>
+    <span
+      className="font-arabic text-lg"
+      style={{ fontWeight: 700 }}
+    >
+      {t("store")}
+    </span>
+  </div>
+
+  <span
+    className="mt-1 text-sm"
+    style={{ color: "#A67C2E" }}
+  >
+    ↗ TikTok @shim2t
+  </span>
+</a>
 
   </Reveal>
           </footer>

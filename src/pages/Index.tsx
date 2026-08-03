@@ -378,7 +378,7 @@ fontSize: lang === "ar" ? "0.35em" : "0.80em",
         <img
           src={locationIcon}
           alt=""
-          className="w-5 h-5"
+          className="w-7 h-7"
         />
 
         <span

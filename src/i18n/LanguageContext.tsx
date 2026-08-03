@@ -92,8 +92,8 @@ dont_scan_qr: "الرجاء عدم مسح الباركود",
   seconds_short: "ث",
 
   // Footer
-  made_by: "صُنع بواسطة ",
-  store: " متجر غيمة  ",
+  made_by: " ",
+  store: "غيمة",
 "designer_name1": "صـالح",
 "designer_and": "&",
 "designer_name2": "ليـان",
@@ -199,8 +199,8 @@ guest_count: "Number of Companions",
   seconds_short: "s",
 
   // Footer
-  made_by: "Crafted with love by",
-  store: "Ghaimah Store",
+  made_by: " ",
+  store: "Ghaimah",
 "designer_name1": "Miaad",
 "designer_and": "&",
 "designer_name2": "Sultan",
